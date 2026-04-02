@@ -1,0 +1,59 @@
+/*Datos personales: Ana Calleja Ramon UO300568*/
+/*Estilos generales del proyecto Gerona-Desktop*/
+
+
+/* Selector de tipo (especificidad 0-0-0-1) */
+body{
+    background-color: #FFFFFF; 
+    color: #000000;
+    font-family: Cambria, serif;
+}
+
+/* Selector de tipo: especificidad 0-0-0-1 */
+header {
+    background-color: #3B3038;
+    color: #DEC4D3;
+}
+
+/* Selector descendente: especificidad 0-0-0-2 */
+/* Aplica un margen inferior al encabezado */
+main h2 {
+    margin-bottom: 0.4rem;
+    border-bottom: 1px solid #3B3038;
+}
+
+/* Selector descendente: especificidad 0-0-0-2 */
+main h3 {
+    margin-top: 0.6rem;
+    margin-bottom: 0.2rem;
+}
+
+
+/* Selector de tipo: especificidad 0-0-0-1 */
+h2, h3, h4, h5, h6 {
+    color: #3B3038; 
+    /* Advertencia: color de fondo heredado de body #000000*/
+}
+
+/* Especificidad: 003, 003 */
+header h1 a, header nav a {
+    color: #DBBDCC; /* Redefinición necesaria: los enlaces no heredan automáticamente el color del header */
+    text-decoration-line: none;
+    /* Comentario accesibilidad: Color heredado de header (#ffffff) confirmado */
+}
+
+/* Especificidad 0-0-1-1 */
+header h1 a:hover,  header nav a:hover{
+    color: #FFEA70; 
+    /* Advertencia: color de fondo heredado de body #000000*/
+}
+
+/* Especificidad: 010 */
+.active {
+    color: #FFEA70; /* Color modificado para cumplir contraste WCAG sobre fondo #3232e8 */
+    /* Comentario accesibilidad: Contraste suficiente con fondo circundante (#3232e8) */
+}
+/* Selector adyacente: especificidad 0-0-0-2 */
+header + p {
+    font-size: 0.9em;
+}
