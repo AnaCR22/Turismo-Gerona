@@ -10,10 +10,14 @@
     <meta name="keywords" content="Gerona, meteorología Gerona, temperatura, lluvia, humedad, viento" />
     <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type = "image/x-icon" href="./multimedia/favicon-Gerona.ico" />
+    <link rel="icon" href="./multimedia/favicon-Gerona.ico" />
 
-    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
-    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet" href="estilo/estilo.css" />
+    <link rel="stylesheet" href="estilo/layout.css" />
+        
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script> 
+    <script src="js/ciudad.js"></script>
+
 </head>
 
 <body>
@@ -24,7 +28,7 @@
 
         <nav>
             <a href="index.html">Inicio</a>
-            <a href="gastronomia.html">Gastronomia</a>
+            <a href="gastronomia.html">Gastronomía</a>
             <a href="rutas.html">Rutas</a>
             <a href="meteorologia.html" class="active">Meteorología</a>
             <a href="juego.html">Juego</a>
@@ -35,10 +39,12 @@
     <p>Estás en: <a href="index.html" title="Página de incio">Inicio</a> >> <strong>Meteorología</strong></p>
     <main>  
         <h2>Meteorología de Gerona</h2>
-
-        <section>
-            <h3>Información de la ciudad de Gerona</h3>
-        </section>
     </main>
+
+    <script>
+        let ciudad = new Ciudad("Gerona", "gerundense"); 
+
+        ciudad.getMeteorologiaCiudad();
+    </script>
 </body>
 </html>

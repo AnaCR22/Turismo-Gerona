@@ -23,11 +23,14 @@ main h2 {
 }
 
 /* Selector descendente: especificidad 0-0-0-2 */
-main h3 {
-    margin-top: 0.6rem;
+section h3 {
+    margin-top: 1rem;
     margin-bottom: 0.2rem;
 }
 
+section p {
+  margin-top: 0.2rem;
+}
 
 /* Selector de tipo: especificidad 0-0-0-1 */
 h2, h3, h4, h5, h6 {
@@ -56,4 +59,36 @@ header h1 a:hover,  header nav a:hover{
 /* Selector adyacente: especificidad 0-0-0-2 */
 header + p {
     font-size: 0.9em;
+}
+
+/* Especificidad: 001 */
+table {
+    border: 0.1rem solid #3B3038;
+    background-color: #fdf8ff;
+    color: #3B3038;
+}
+
+/* Especificidad: 001 */
+caption {
+    font-size: 1rem; 
+    font-weight: bold;
+    color: #3B3038;
+    text-align: center;
+    padding: 0.25rem;
+    /* Comentario accesibilidad: Contraste suficiente con fondo tabla (#fdf8ff) */
+}
+
+/* Especificidad: 012 */
+tbody tr {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    /* Comentario accesibilidad: Texto sobre fondo (#ffffff) */
+}
+
+/* Bordes de celdas */
+/* Especificidad: 001 */
+th, td {
+    border: 0.05rem solid #DEC4D3;
+    /* Comentario accesibilidad: No afecta legibilidad */
 }

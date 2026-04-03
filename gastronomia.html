@@ -6,14 +6,14 @@
     <title>Gerona-Gastronomia</title>
 
     <meta name ="author" content ="Ana Calleja Ramón" />
-    <meta name ="description" content ="Página principal de Gerona" />
+    <meta name ="description" content ="Gastronomía de Gerona" />
     <meta name="keywords" content="Gerona, gastronomía Gerona, comida" />
     <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type = "image/x-icon" href="./multimedia/favicon-Gerona.ico" />
+    <link rel="icon" href="./multimedia/favicon-Gerona.ico" />
 
-    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
-    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet" href="estilo/estilo.css" />
+    <link rel="stylesheet" href="estilo/layout.css" />
 </head>
 
 <body>
@@ -34,6 +34,127 @@
 
     <p>Estás en: <a href="index.html" title="Página de incio">Inicio</a> >> <strong>Gastronomía</strong></p>
 
-    <main></main>
+    <main>
+        <h2>Gastronomía de Gerona</h2>
+
+        <!-- Párrafo introductorio sobre la ciudad -->
+        <section>
+            <p>
+                <a href="https://es.wikipedia.org/wiki/Gerona">Gerona</a> 
+                es un municipio y ciudad de la comunidad autónoma de Cataluña con un encanto único, 
+                bañada por cuatro ríos y coronada por su majestuosa catedral. 
+                Su ubicación estratégica entre los Pirineos y la Costa Brava permite tener una identidad 
+                gastronómica rica, variada y profundamente arraigada a sus tradiciones.
+            </p>
+
+            <figure>
+                <picture>
+                    <source srcset="multimedia/gerona-mobile.jpg" media="(max-width: 465px)">
+                    <source srcset="multimedia/gerona-tablet.jpg" media="(max-width: 799px)">
+                    <source srcset="multimedia/gerona-desktop.jpg" media="(min-width: 800px)">
+                    <img src="multimedia/gerona-desktop.jpg" alt="Foto de Gerona">
+                </picture>
+                <figcaption>Paisaje de Gerona.</figcaption>
+            </figure>
+        </section>
+
+         <!-- Lista ordenada -->
+        <section>
+            <h3>Tres platos imprescindibles</h3>
+            <p>Si visitas Girona, estos son algunos de los platos y productos más representativos:</p>
+
+            <ol>
+                <li>Suquet de peix</li>
+                <li>Xuixo de Girona</li>
+                <li>Arroz de Pals</li>
+            </ol>
+        </section>
+
+        <figure>
+            <video controls>
+                <source src="multimedia/video_gerona.mp4" type="video/mp4">
+                <source src="multimedia/video_gerona.webm" type="video/webm">
+                Tu navegador no soporta el elemento de vídeo.
+            </video>
+            <figcaption>Descubre la cocina de Gerona.</figcaption>
+        </figure>
+        
+        <!-- Lista no ordenada con lista anidada -->
+        <section>
+            <h3>Productos típicos de la provincia</h3>
+            <p>
+                Girona cuenta con una gran variedad de productos gastronómicos.
+                Algunos de los más conocidos son:
+            </p>
+
+            <ul>
+                <li>Embutidos artesanales</li>
+                <li>Dulces tradicionales
+                    <ul>
+                        <li>Xuixo</li>
+                        <li>Crema catalana</li>
+                        <li>Panellets</li>
+                    </ul>
+                </li>
+                <li>Pescados y mariscos de la Costa Brava</li>
+            </ul>
+        </section>
+
+        <!-- Lista de definiciones -->
+        <section>
+            <h3>Glosario gastronómico</h3>
+            <p>Estos son algunos términos que te ayudarán a entender mejor la cocina típica de Girona, junto a un audio explicativo.</p>
+            <dl>
+                <dt>Suquet de peix</dt>
+                <dd>Guiso tradicional de pescado con patatas y salsa, muy típico de la costa catalana.</dd>
+
+                <dt>Xuixo de Girona</dt>
+                <dd>Dulce típico de Girona relleno de crema, frito y cubierto de azúcar.</dd>
+
+                <dt>Arroz de Pals</dt>
+                <dd>Variedad de arroz cultivada en la comarca del Baix Empordà, muy apreciada por su calidad.</dd>
+            </dl>
+            <audio controls>
+                <source src="./multimedia/gerona-audio.mp3"
+                type="audio/mp3"/>
+                <source src="./multimedia/gerona-audio.m4a"
+                type="audio/wav"/>
+                Audio explicando los tres platos típicos de Gerona
+            </audio>
+        </section>
+
+        <!-- Tabla accesible y adaptable -->
+        <section>
+            <h3>Precios por plato típico</h3>
+            <p>Si visitas Girona, esta tabla te ayudará a orientarte con los precios de los platos más populares de la provincia.</p>
+            <table>
+                <caption>Platos y precios</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" id="plato">Plato Típico</th>
+                        <th scope="col" id="precio">Precio Medio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td headers="plato">Xuixo de Girona</td>
+                        <td headers="precio">2€ – 3€</td>
+                    </tr>
+                    <tr>
+                        <td headers="plato">Anchoas de l'Escala</td>
+                        <td headers="precio">8€ – 15€</td>
+                    </tr>
+                    <tr>
+                        <td headers="plato">Suquet de peix</td>
+                        <td headers="precio">18€ – 25€</td>
+                    </tr>
+                    <tr>
+                        <td headers="plato">Arroz de Pals</td>
+                        <td headers="precio">15€ – 22€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>        
+    </main>
 </body>
 </html>
