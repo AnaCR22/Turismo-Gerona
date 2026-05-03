@@ -1,0 +1,52 @@
+<!ELEMENT rutas (ruta+)>
+<!ELEMENT ruta (nombre, tipo, transporte, fechaInicio?, horaInicio?, duracion, agencia, descripcion, adecuadaPara, inicio, referencias, recomendacion, hitos, planimetria, altimetria)>
+<!ATTLIST ruta id ID #REQUIRED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT transporte (#PCDATA)>
+<!ELEMENT fechaInicio (#PCDATA)>
+<!ELEMENT horaInicio (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+<!ELEMENT agencia (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT adecuadaPara (#PCDATA)>
+
+<!ELEMENT inicio (lugar, direccion, coordenadas)>
+<!ELEMENT lugar (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+
+<!ELEMENT coordenadas (longitud, latitud, altitud)>
+<!ELEMENT longitud (#PCDATA)>
+<!ELEMENT latitud (#PCDATA)>
+<!ELEMENT altitud (#PCDATA)>
+
+<!ELEMENT referencias (referencia, referencia, referencia+)>
+<!ELEMENT referencia  (#PCDATA)>
+<!ATTLIST referencia url CDATA #IMPLIED>
+
+<!ELEMENT recomendacion (#PCDATA)>
+
+<!ELEMENT hitos ((hito | puntoRuta)+)>
+<!ELEMENT hito (nombre, descripcion, coordenadas, distancia, fotos, videos?)>
+<!ATTLIST hito id ID #REQUIRED>
+
+<!ELEMENT puntoRuta (coordenadas, distancia)>
+<!ATTLIST puntoRuta seq CDATA #REQUIRED>
+
+<!ELEMENT distancia (#PCDATA)>
+<!ATTLIST distancia unidad CDATA #REQUIRED>
+
+<!ELEMENT fotos (foto, foto?, foto?, foto?, foto?)>
+<!ELEMENT foto EMPTY>
+<!ATTLIST foto 
+    url CDATA #REQUIRED
+    descripcion CDATA #IMPLIED>
+<!ELEMENT videos (video?, video?, video?)>
+<!ELEMENT video EMPTY>
+<!ATTLIST video 
+    url CDATA #REQUIRED
+    descripcion CDATA #IMPLIED>
+
+<!ELEMENT planimetria (#PCDATA)>
+<!ELEMENT altimetria (#PCDATA)>

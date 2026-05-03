@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rutas SYSTEM "rutas.dtd">
+<rutas>
+    <ruta id="ruta1">
+        <nombre>Ruta Monumental del Casco Histórico de Girona</nombre>
+        <tipo>Arquitectura y monumentos</tipo>
+        <transporte>A pie</transporte>
+        <fechaInicio>2024-03-15</fechaInicio>
+        <horaInicio>09:30</horaInicio>
+        <duracion>3 horas</duracion>
+        <agencia>Girona Turisme</agencia>
+
+        <descripcion>
+            Recorrido circular por el casco histórico medieval de Girona, uno de los mejor
+            conservados de Cataluña. La ruta combina el paseo arqueológico por las murallas
+            carolingias con los monumentos más emblemáticos de la ciudad: la Catedral gótica,
+            el barrio judío (Call), los Baños Árabes, el monasterio de Sant Pere de Galligants
+            y las coloridas Casas del Onyar. El recorrido discurre principalmente por adoquines
+            y escalinatas históricas, con desniveles moderados al subir a las murallas.
+        </descripcion>
+
+        <adecuadaPara>
+            Personas en buena forma física; no recomendada para personas con movilidad reducida
+            por las escalinatas de acceso a las murallas (230 peldaños). Apta para familias con
+            niños mayores de 8 años. Tercera edad con buenas condiciones físicas.
+        </adecuadaPara>
+
+        <inicio>
+            <lugar>Monasterio de Sant Pere de Galligants</lugar>
+            <direccion>Carrer de Santa Llúcia, s/n</direccion>
+            <coordenadas>
+                <longitud>2.82571</longitud>
+                <latitud>41.99104</latitud>
+                <altitud>75</altitud>
+            </coordenadas>
+        </inicio>
+
+        <referencias>
+            <referencia url="https://www.girona.cat/turisme">
+                Girona Turisme — Oficina oficial de turismo del Ayuntamiento de Girona
+            </referencia>
+            <referencia url="https://es.wikipedia.org/wiki/Casco_antiguo_de_Gerona">
+                Wikipedia — Casco antiguo de Gerona: historia y monumentos
+            </referencia>
+            <referencia url="http://www.gironaviajesbaratos.com/ruta-paseo-murallas/">
+                Girona Viajes — Ruta del Paseo de las Murallas de Girona
+            </referencia>
+        </referencias>
+
+        <recomendacion>9</recomendacion>
+
+        <hitos>
+            <!-- HITO 1 -->
+            <hito id="h1_01">
+                <nombre>Monasterio de Sant Pere de Galligants</nombre>
+                <descripcion>
+                    Monasterio benedictino románico del siglo XII que actúa como sede del Museo de
+                    Arqueología de Cataluña en Girona. Presenta una magnífica iglesia con cabecera
+                    de cinco ábsides y un claustro de extraordinaria riqueza escultórica. Es el
+                    punto de partida natural de la ruta por las murallas.
+                </descripcion>
+                <coordenadas>
+                    <longitud>2.82571</longitud>
+                    <latitud>41.99104</latitud>
+                    <altitud>75</altitud>
+                </coordenadas>
+                <distancia unidad="m">0</distancia>
+                <fotos>
+                <foto url="fotos/girona/sant_pere_galligants_01.jpg"
+                        descripcion="Fachada románica del monasterio de Sant Pere de Galligants"/>
+                <foto url="fotos/girona/sant_pere_galligants_02.jpg"
+                        descripcion="Claustro interior con capiteles románicos esculpidos"/>
+                <foto url="fotos/girona/sant_pere_galligants_03.jpg"
+                        descripcion="Exposición permanente del Museo de Arqueología de Cataluña"/>
+                </fotos>
+                <videos>
+                <video url="videos/girona/sant_pere_galligants_tour.mp4"
+                        descripcion="Visita virtual 360° al monasterio y su claustro"/>
+                </videos>
+            </hito>
+            
+            <puntoRuta seq="1">
+                <coordenadas>
+                    <longitud>2.82598</longitud>
+                    <latitud>41.99050</latitud>
+                    <altitud>76</altitud>
+                </coordenadas>
+                <distancia unidad="m">65</distancia>
+            </puntoRuta>
+
+            <puntoRuta seq="2">
+                <coordenadas>
+                    <longitud>2.82620</longitud>
+                    <latitud>41.99010</latitud>
+                    <altitud>88</altitud>
+                </coordenadas>
+                <distancia unidad="m">75</distancia>
+            </puntoRuta>
+
+            <!-- HITO 2 -->
+            <hito id="h1_02">
+                <nombre>Paseo Arqueológico de las Murallas</nombre>
+                <descripcion>
+                    Las murallas de Girona conforman uno de los paseos arqueológicos más
+                    espectaculares de Cataluña. De origen romano, ampliadas en época carolingia
+                    y medieval, permiten recorrer el perímetro del casco antiguo a gran altura,
+                    ofreciendo vistas panorámicas de la ciudad, los Pirineos y el río Onyar.
+                    El acceso desde el monasterio requiere subir 230 peldaños de escaleras metálicas.
+                </descripcion>
+                <coordenadas>
+                    <longitud>2.82640</longitud>
+                    <latitud>41.99020</latitud>
+                    <altitud>102</altitud>
+                </coordenadas>
+                <distancia unidad="m">280</distancia>
+                <fotos>
+                <foto url="fotos/girona/murallas_panoramica_01.jpg"
+                        descripcion="Vista panorámica de Girona desde el adarve de las murallas"/>
+                <foto url="fotos/girona/murallas_torre_01.jpg"
+                        descripcion="Torre Gironella, punto más alto del recinto amurallado"/>
+                <foto url="fotos/girona/murallas_catedral_01.jpg"
+                        descripcion="Vista de la Catedral de Girona desde las murallas"/>
+                </fotos>
+                <videos>
+                <video url="videos/girona/murallas_paseo.mp4"
+                        descripcion="Recorrido en vídeo por el paseo arqueológico de las murallas"/>
+                <video url="videos/girona/murallas_amanecer.mp4"
+                        descripcion="Amanecer sobre Girona filmado desde las murallas carolingias"/>
+                </videos>
+            </hito>
+        
+            <puntoRuta seq="3">
+                <coordenadas>
+                    <longitud>2.82690</longitud>
+                    <latitud>41.98950</latitud>
+                    <altitud>110</altitud>
+                </coordenadas>
+                <distancia unidad="m">95</distancia>
+            </puntoRuta>
+
+            <puntoRuta seq="4">
+                <coordenadas>
+                    <longitud>2.82660</longitud>
+                    <latitud>41.98830</latitud>
+                    <altitud>105</altitud>
+                </coordenadas>
+                <distancia unidad="m">140</distancia>
+            </puntoRuta>
+
+            <!-- HITO 3 -->
+            <hito id="h1_03">
+                <nombre>Catedral de Santa Maria de Girona</nombre>
+                <descripcion>
+                    La catedral gótica de Girona posee la nave gótica más ancha del mundo (23 metros),
+                    construida entre los siglos XI y XVIII. Su espectacular escalinata barroca de 86
+                    peldaños domina la plaza de los Apóstoles. Alberga el Tapís de la Creació,
+                    el tapiz románico mejor conservado de Europa, y el Tresor de la Catedral.
+                    Fue escenario de la serie Juego de Tronos.
+                </descripcion>
+                <coordenadas>
+                    <longitud>2.82547</longitud>
+                    <latitud>41.98715</latitud>
+                    <altitud>88</altitud>
+                </coordenadas>
+                <distancia unidad="m">450</distancia>
+                <fotos>
+                <foto url="fotos/girona/catedral_escalinata_01.jpg"
+                        descripcion="Escalinata barroca de 86 peldaños de la Catedral de Girona"/>
+                <foto url="fotos/girona/catedral_nave_01.jpg"
+                        descripcion="Nave gótica interior — la más ancha del mundo en estilo gótico"/>
+                <foto url="fotos/girona/catedral_tapis_01.jpg"
+                        descripcion="Detalle del Tapís de la Creació (Tapiz de la Creación), s. XI-XII"/>
+                <foto url="fotos/girona/catedral_nocturna_01.jpg"
+                        descripcion="Iluminación nocturna de la fachada de la catedral"/>
+                </fotos>
+                <videos>
+                <video url="videos/girona/catedral_interior.mp4"
+                        descripcion="Recorrido por el interior de la catedral y el tesoro"/>
+                </videos>
+            </hito>
+        
+            <puntoRuta seq="5">
+                <coordenadas>
+                    <longitud>2.82510</longitud>
+                    <latitud>41.98690</latitud>
+                    <altitud>82</altitud>
+                </coordenadas>
+                <distancia unidad="m">55</distancia>
+            </puntoRuta>
+
+            <!-- HITO 4 -->
+            <hito id="h1_04">
+                <nombre>El Call — Barrio Judío de Girona</nombre>
+                <descripcion>
+                    El Call de Girona es uno de los barrios judíos medievales mejor conservados de
+                    Europa, habitado entre los siglos IX y XV. Sus callejuelas estrechas y empinadas
+                    conservan sinagogas, hornos comunitarios y el Centro Bonastruc ça Porta (sede
+                    del Museo de la Historia de los Judíos). La judería girones fue famosa en toda
+                    Europa por su escuela cabalística.
+                </descripcion>
+                <coordenadas>
+                    <longitud>2.82480</longitud>
+                    <latitud>41.98650</latitud>
+                    <altitud>78</altitud>
+                </coordenadas>
+                <distancia unidad="m">200</distancia>
+                <fotos>
+                <foto url="fotos/girona/call_callejuela_01.jpg"
+                        descripcion="Callejuela medieval del Call, barrio judío de Girona"/>
+                <foto url="fotos/girona/call_bonastruc_01.jpg"
+                        descripcion="Centro Bonastruc ça Porta — Museo de Historia de los Judíos"/>
+                <foto url="fotos/girona/call_sinagoga_01.jpg"
+                        descripcion="Vestigios de la antigua sinagoga medieval del Call"/>
+                </fotos>
+            </hito>
+        
+            <puntoRuta seq="6">
+                <coordenadas>
+                    <longitud>2.82540</longitud>
+                    <latitud>41.98700</latitud>
+                    <altitud>79</altitud>
+                </coordenadas>
+                <distancia unidad="m">80</distancia>
+            </puntoRuta>
+
+            <!-- HITO 5 -->
+            <hito id="h1_05">
+                <nombre>Baños Árabes (Banys Àrabs)</nombre>
+                <descripcion>
+                    Construidos en el siglo XII en estilo románico con influencias árabes y
+                    bizantinas, los Baños Árabes son el conjunto termal civil más completo de
+                    Cataluña y uno de los mejor conservados de la Península Ibérica. Constan de
+                    cinco salas: vestuario (apodyterium), sala fría (frigidarium), sala tibia
+                    (tepidarium), sala caliente (caldarium) y sala del horno (praefurnium).
+                </descripcion>
+                <coordenadas>
+                    <longitud>2.82600</longitud>
+                    <latitud>41.98750</latitud>
+                    <altitud>80</altitud>
+                </coordenadas>
+                <distancia unidad="m">150</distancia>
+                <fotos>
+                <foto url="fotos/girona/banys_arabs_exterior_01.jpg"
+                        descripcion="Fachada exterior de los Baños Árabes de Girona (s. XII)"/>
+                <foto url="fotos/girona/banys_arabs_apodyterium_01.jpg"
+                        descripcion="Sala del apodyterium (vestuario) con su linterna octogonal"/>
+                <foto url="fotos/girona/banys_arabs_frigidarium_01.jpg"
+                        descripcion="Frigidarium — sala fría con piscina y columnas románicas"/>
+                </fotos>
+                <videos>
+                <video url="videos/girona/banys_arabs_visita.mp4"
+                        descripcion="Visita guiada a las cinco salas de los Baños Árabes"/>
+                </videos>
+            </hito>
+        
+            <puntoRuta seq="7">
+                <coordenadas>
+                    <longitud>2.82490</longitud>
+                    <latitud>41.98640</latitud>
+                    <altitud>74</altitud>
+                </coordenadas>
+                <distancia unidad="m">130</distancia>
+            </puntoRuta>
+
+            <puntoRuta seq="8">
+                <coordenadas>
+                    <longitud>2.82380</longitud>
+                    <latitud>41.98600</latitud>
+                    <altitud>71</altitud>
+                </coordenadas>
+                <distancia unidad="m">105</distancia>
+            </puntoRuta>
+
+            <!-- HITO 6 -->
+            <hito id="h1_06">
+                <nombre>Casas del Onyar</nombre>
+                <descripcion>
+                    Las coloridas casas que se asoman al río Onyar son la imagen más icónica y
+                    fotografiada de Girona. Construidas entre los siglos XVII y XIX, sus fachadas
+                    pintadas de colores vivos (ocre, rojo, amarillo, verde) reflejan su imagen en
+                    el río. El Pont de Pedra ofrece la perspectiva más conocida. Gustave Eiffel
+                    diseñó el Pont de les Peixateries Velles que también cruza el Onyar.
+                </descripcion>
+                <coordenadas>
+                    <longitud>2.82350</longitud>
+                    <latitud>41.98580</latitud>
+                    <altitud>70</altitud>
+                </coordenadas>
+                <distancia unidad="m">320</distancia>
+                <fotos>
+                <foto url="fotos/girona/casas_onyar_01.jpg"
+                        descripcion="Las coloridas Casas del Onyar reflejadas en el río"/>
+                <foto url="fotos/girona/casas_onyar_pont_pedra_01.jpg"
+                        descripcion="Vista de las Casas del Onyar desde el Pont de Pedra"/>
+                <foto url="fotos/girona/casas_onyar_pont_eiffel_01.jpg"
+                        descripcion="Pont de les Peixateries Velles, diseñado por Gustave Eiffel"/>
+                <foto url="fotos/girona/casas_onyar_atardecer_01.jpg"
+                        descripcion="Atardecer sobre las Casas del Onyar — Girona"/>
+                </fotos>
+                <videos>
+                <video url="videos/girona/casas_onyar_drone.mp4"
+                        descripcion="Vista aérea con dron de las Casas del Onyar y el río"/>
+                </videos>
+            </hito>
+        
+            <puntoRuta seq="9">
+                <coordenadas>
+                    <longitud>2.82310</longitud>
+                    <latitud>41.98540</latitud>
+                    <altitud>69</altitud>
+                </coordenadas>
+                <distancia unidad="m">90</distancia>
+            </puntoRuta>
+
+            <!-- HITO 7 -->
+            <hito id="h1_07">
+                <nombre>Rambla de la Llibertat y fin de ruta</nombre>
+                <descripcion>
+                    La Rambla de la Llibertat (Libertad) es el corazón peatonal de Girona, llena
+                    de terrazas, comercios y el mercado semanal. Construida sobre el antiguo camino
+                    de ronda de la muralla medieval occidental, conecta el casco antiguo con la
+                    ciudad moderna. Desde aquí se regresa al punto de partida cruzando el Pont de
+                    Pedra hacia el barrio de Sant Pere.
+                </descripcion>
+                <coordenadas>
+                    <longitud>2.82290</longitud>
+                    <latitud>41.98510</latitud>
+                    <altitud>69</altitud>
+                </coordenadas>
+                <distancia unidad="m">280</distancia>
+                <fotos>
+                <foto url="fotos/girona/rambla_llibertat_01.jpg"
+                        descripcion="La Rambla de la Llibertat, paseo peatonal del centro de Girona"/>
+                <foto url="fotos/girona/rambla_llibertat_mercado_01.jpg"
+                        descripcion="Mercado semanal en la Rambla de la Llibertat"/>
+                </fotos>
+            </hito>
+        </hitos>
+
+        <planimetria>planimetria_ruta1.kml</planimetria>
+        <altimetria>altimetria_ruta1.svg</altimetria>
+    </ruta>
+
+
+    <ruta id="ruta2">
+ 
+        <nombre>Vía Verde del Carrilet II: Girona — Sant Feliu de Guíxols</nombre>
+        <tipo>Ciclismo</tipo>
+        <transporte>Bicicleta</transporte>
+        <fechaInicio>2024-04-20</fechaInicio>
+        <horaInicio>09:00</horaInicio>
+        <duracion>3 horas</duracion>
+        <agencia>Consorci de les Vies Verdes de Girona</agencia>
+    
+        <descripcion>
+            Recorrido lineal de 39,7 km por el antiguo trazado del tren de vía estrecha "El Feliuet"
+            (1892–1969), que unía Girona con Sant Feliu de Guíxols. Pavimento de arena compactada
+            (sauló), pendiente suave constante en descenso desde Girona hasta el mar, con desnivel
+            máximo de 136 m en Cassà de la Selva. Discurre por las comarcas del Gironès y el Baix
+            Empordà, atravesando campos de cultivo, pinares y antiguas estaciones restauradas.
+        </descripcion>
+    
+        <adecuadaPara>Familias con niños, tercera edad, iniciación al cicloturismo.</adecuadaPara>
+    
+        <inicio>
+        <lugar>Parc de la Devesa — Plaça dels Països Catalans</lugar>
+        <direccion>Plaça dels Països Catalans, s/n</direccion>
+        <coordenadas>
+            <longitud>2.81890</longitud>
+            <latitud>41.98260</latitud>
+            <altitud>70</altitud>
+        </coordenadas>
+        </inicio>
+    
+        <referencias>
+            <referencia url="https://www.viesverdes.cat/ca/vies-verdes/carrilet-ii">
+                Vies Verdes de Girona — Página oficial del Carrilet II con track GPS y servicios
+            </referencia>
+            <referencia url="https://es.wikiloc.com/rutas-mountain-bike/de-girona-a-sant-feliu-de-guixols-per-la-via-verda-6701641">
+                Wikiloc — Track GPS completo de Girona a Sant Feliu de Guíxols por la Vía Verde
+            </referencia>
+            <referencia url="https://www.femturisme.cat/es/rutas/ruta-adaptada-del-carrilet-2-de-girona-a-sant-feliu-de-guixols">
+                FemTurisme — Ruta adaptada del Carrilet II (accesible)
+            </referencia>
+            <referencia url="https://conalforjas.com/carrilet-bicicleta/">
+                Con Alforjas — Guía de planificación de etapas y alojamientos del Carrilet
+            </referencia>
+        </referencias>
+    
+        <recomendacion>8</recomendacion>
+    
+        <hitos>
+    
+        <!-- HITO 1 -->
+        <hito id="h2_01">
+            <nombre>Parc de la Devesa — Salida Girona</nombre>
+            <descripcion>
+                El parque de la Devesa, el más grande de Girona con sus legendarios plátanos,
+                es el punto de partida oficial de la Vía Verde. Desde aquí parte el carril bici
+                paralelo al río Onyar hacia la rotonda de Emili Grahit.
+            </descripcion>
+            <coordenadas>
+                <longitud>2.81890</longitud>
+                <latitud>41.98260</latitud>
+                <altitud>70</altitud>
+            </coordenadas>
+            <distancia unidad="m">0</distancia>
+            <fotos>
+            <foto url="fotos/carrilet/devesa_salida_01.jpg"
+                    descripcion="Inicio de la Vía Verde en el Parc de la Devesa, Girona"/>
+            <foto url="fotos/carrilet/devesa_platanos_01.jpg"
+                    descripcion="Avenida de plátanos centenarios del Parc de la Devesa"/>
+            </fotos>
+        </hito>
+    
+        <puntoRuta seq="1">
+            <coordenadas>
+                <longitud>2.82050</longitud>
+                <latitud>41.97600</latitud>
+                <altitud>72</altitud>
+            </coordenadas>
+            <distancia unidad="km">0.85</distancia>
+        </puntoRuta>
+    
+        <puntoRuta seq="2">
+            <coordenadas>
+                <longitud>2.81750</longitud>
+                <latitud>41.96200</latitud>
+                <altitud>78</altitud>
+            </coordenadas>
+            <distancia unidad="km">1.60</distancia>
+        </puntoRuta>
+    
+        <puntoRuta seq="3">
+            <coordenadas>
+                <longitud>2.81500</longitud>
+                <latitud>41.95400</latitud>
+                <altitud>82</altitud>
+            </coordenadas>
+            <distancia unidad="km">0.90</distancia>
+        </puntoRuta>
+
+        <!-- HITO 2 -->
+        <hito id="h2_02">
+            <nombre>Antigua Estación de Quart</nombre>
+            <descripcion>
+                Antigua estación del Carrilet en el km 6,086 de la línea, hoy restaurada como
+                área de descanso con WC y fuente. Aquí arranca el trazado original del tren
+                sobre arena compactada, dejando atrás el entorno urbano de Girona.
+            </descripcion>
+            <coordenadas>
+                <longitud>2.79950</longitud>
+                <latitud>41.94780</latitud>
+                <altitud>88</altitud>
+            </coordenadas>
+            <distancia unidad="km">6.1</distancia>
+            <fotos>
+            <foto url="fotos/carrilet/quart_estacion_01.jpg"
+                    descripcion="Estación restaurada de Quart con estatua del Feliuet"/>
+            <foto url="fotos/carrilet/quart_via_01.jpg"
+                    descripcion="Tramo de vía verde a la salida de Quart entre campos de cultivo"/>
+            </fotos>
+            <videos>
+            <video url="videos/carrilet/quart_feliuet.mp4"
+                    descripcion="Estatua del Feliuet en la estación de Quart — historia del carrilet"/>
+            </videos>
+        </hito>
+
+        <puntoRuta seq="4">
+            <coordenadas>
+                <longitud>2.85200</longitud>
+                <latitud>41.91900</latitud>
+                <altitud>105</altitud>
+            </coordenadas>
+            <distancia unidad="km">4.80</distancia>
+        </puntoRuta>
+    
+        <puntoRuta seq="5">
+            <coordenadas>
+                <longitud>2.87100</longitud>
+                <latitud>41.88500</latitud>
+                <altitud>122</altitud>
+            </coordenadas>
+            <distancia unidad="km">3.90</distancia>
+        </puntoRuta>
+
+        <!-- HITO 3 -->
+        <hito id="h2_03">
+            <nombre>Estación de Llagostera</nombre>
+            <descripcion>
+                La estación de Llagostera, en el km 20,756, fue la más grande del trayecto con
+                11.445 m² de terreno. Es el punto intermedio natural de la ruta y cuenta con
+                bar, WC y zona de descanso. El pueblo tiene un interesante casco antiguo medieval.
+            </descripcion>
+            <coordenadas>
+                <longitud>2.89720</longitud>
+                <latitud>41.83050</latitud>
+                <altitud>136</altitud>
+            </coordenadas>
+            <distancia unidad="km">14.7</distancia>
+            <fotos>
+            <foto url="fotos/carrilet/llagostera_estacion_01.jpg"
+                    descripcion="Antigua estación de Llagostera reconvertida en área de descanso"/>
+            <foto url="fotos/carrilet/llagostera_via_01.jpg"
+                    descripcion="La vía verde a su paso por los pinares de Llagostera"/>
+            <foto url="fotos/carrilet/llagostera_casco_01.jpg"
+                    descripcion="Casco antiguo medieval de Llagostera"/>
+            </fotos>
+        </hito>
+    
+        <puntoRuta seq="6">
+            <coordenadas>
+                <longitud>2.91500</longitud>
+                <latitud>41.81800</latitud>
+                <altitud>124</altitud>
+            </coordenadas>
+            <distancia unidad="km">2.30</distancia>
+        </puntoRuta>
+    
+        <puntoRuta seq="7">
+            <coordenadas>
+                <longitud>2.93400</longitud>
+                <latitud>41.80500</latitud>
+                <altitud>118</altitud>
+            </coordenadas>
+            <distancia unidad="km">2.50</distancia>
+        </puntoRuta>
+
+        <!-- HITO 4 -->
+        <hito id="h2_04">
+            <nombre>Font Picant — Tramo más bello de la ruta</nombre>
+            <descripcion>
+                Entre la C-250 y Santa Cristina d'Aro se encuentra el tramo más pintoresco del
+                recorrido, con la vía alejándose de la carretera hacia un corredor verde flanqueado
+                de pinos mediterráneos y la Font Picant como parada refrescante.
+            </descripcion>
+            <coordenadas>
+                <longitud>2.95100</longitud>
+                <latitud>41.79640</latitud>
+                <altitud>118</altitud>
+            </coordenadas>
+            <distancia unidad="km">7.2</distancia>
+            <fotos>
+            <foto url="fotos/carrilet/font_picant_01.jpg"
+                    descripcion="La Font Picant, fuente natural en el tramo más bello del Carrilet"/>
+            <foto url="fotos/carrilet/corredor_verde_01.jpg"
+                    descripcion="Corredor verde de pinos mediterráneos entre Llagostera y Sta. Cristina"/>
+            </fotos>
+            <videos>
+            <video url="videos/carrilet/tramo_bonito.mp4"
+                    descripcion="Recorrido en bicicleta por el tramo de la Font Picant"/>
+            </videos>
+        </hito>
+    
+        <puntoRuta seq="8">
+            <coordenadas>
+                <longitud>2.97800</longitud>
+                <latitud>41.81200</latitud>
+                <altitud>95</altitud>
+            </coordenadas>
+            <distancia unidad="km">3.60</distancia>
+        </puntoRuta>
+
+        <!-- HITO 5 -->
+        <hito id="h2_05">
+            <nombre>Estación de Castell — Platja d'Aro</nombre>
+            <descripcion>
+                Antigua estación de Castell d'Aro, punto de acceso a la popular Platja d'Aro.
+                Desde aquí la vía gira al sur, cruza el río Ridaura y la C-31, iniciando el
+                descenso final hacia el mar a través de suaves colinas.
+            </descripcion>
+            <coordenadas>
+                <longitud>3.00210</longitud>
+                <latitud>41.81280</latitud>
+                <altitud>65</altitud>
+            </coordenadas>
+            <distancia unidad="km">5.5</distancia>
+            <fotos>
+            <foto url="fotos/carrilet/castello_aro_01.jpg"
+                    descripcion="Estación de Castell-Platja d'Aro en la vía verde del Carrilet"/>
+            <foto url="fotos/carrilet/platja_aro_playa_01.jpg"
+                    descripcion="Playa de Platja d'Aro, accesible desde la estación"/>
+            </fotos>
+        </hito>
+    
+        <puntoRuta seq="9">
+            <coordenadas>
+                <longitud>3.01200</longitud>
+                <latitud>41.80200</latitud>
+                <altitud>48</altitud>
+            </coordenadas>
+            <distancia unidad="km">1.90</distancia>
+        </puntoRuta>
+    
+        <puntoRuta seq="10">
+            <coordenadas>
+                <longitud>3.01800</longitud>
+                <latitud>41.79500</latitud>
+                <altitud>55</altitud>
+            </coordenadas>
+            <distancia unidad="km">1.10</distancia>
+        </puntoRuta>
+    
+        <puntoRuta seq="11">
+            <coordenadas>
+                <longitud>3.02200</longitud>
+                <latitud>41.78900</latitud>
+                <altitud>28</altitud>
+            </coordenadas>
+            <distancia unidad="km">1.30</distancia>
+        </puntoRuta>
+
+        <!-- HITO 6 -->
+        <hito id="h2_06">
+            <nombre>Puerto y Monasterio de Sant Feliu de Guíxols</nombre>
+            <descripcion>
+                Final del recorrido junto al mar. El Tinglado (antiguo almacén del puerto,
+                hoy Centro de Interpretación de las Vías Verdes) y el monasterio benedictino
+                con su espectacular Porta Ferrada (s. X) son los puntos de llegada imprescindibles.
+            </descripcion>
+            <coordenadas>
+                <longitud>3.02780</longitud>
+                <latitud>41.78210</latitud>
+                <altitud>5</altitud>
+            </coordenadas>
+            <distancia unidad="km">6.9</distancia>
+            <fotos>
+            <foto url="fotos/carrilet/sfg_tinglado_01.jpg"
+                    descripcion="El Tinglado — Centro de Interpretación de las Vías Verdes en el puerto"/>
+            <foto url="fotos/carrilet/sfg_monestir_01.jpg"
+                    descripcion="Monasterio benedictino de Sant Feliu de Guíxols con la Porta Ferrada"/>
+            <foto url="fotos/carrilet/sfg_puerto_01.jpg"
+                    descripcion="Puerto de Sant Feliu de Guíxols, final del Carrilet II"/>
+            <foto url="fotos/carrilet/sfg_playa_01.jpg"
+                    descripcion="Playa de Sant Pol desde el paseo marítimo de Sant Feliu"/>
+            </fotos>
+            <videos>
+            <video url="videos/carrilet/sfg_llegada.mp4"
+                    descripcion="Llegada al puerto de Sant Feliu de Guíxols por la vía verde"/>
+            </videos>
+        </hito>
+        </hitos>
+    
+        <planimetria>planimetria_ruta002.kml</planimetria>
+        <altimetria>altimetria_ruta002.svg</altimetria>
+    </ruta>
+
+    <ruta id="ruta3">
+ 
+        <nombre>Ruta Gastronómica DO Empordà: de Peralada a Cadaqués</nombre>
+        <tipo>Gastronómica</tipo>
+        <transporte>A pie</transporte>
+        <duracion>2 días</duracion>
+        <agencia>Costa Brava Girona Turisme</agencia>
+    
+        <descripcion>
+            Itinerario enogastronómico por el Alt Empordà, comarca con tradición vinícola de más
+            de 2.500 años iniciada por los griegos de Empúries. La ruta combina visitas a bodegas
+            de la DO Empordà, mercados de productos locales (cebolla de Figueres, anchoas de
+            l'Escala, arroz de Pals) y restaurantes de referencia, con el paisaje de viñedos
+            entre la tramontana y el Mediterráneo.
+        </descripcion>
+    
+        <adecuadaPara>Adultos y parejas; no recomendada para niños pequeños.</adecuadaPara>
+
+        <inicio>
+            <lugar>Castillo de Peralada — Museo del Vino</lugar>
+            <direccion>Plaça del Carme, 1</direccion>
+            <coordenadas>
+                <longitud>3.01410</longitud>
+                <latitud>42.30510</latitud>
+                <altitud>46</altitud>
+            </coordenadas>
+        </inicio>
+
+        <referencias>
+            <referencia url="https://costabrava.org/es/que-hacer/enogastronomia/ruta-del-vino-do-emporda/">
+                Costa Brava Girona — Ruta del Vino DO Empordà: experiencias y bodegas
+            </referencia>
+            <referencia url="https://www.doemporda.cat/es/descubre.html">
+                DO Empordà — Itinerarios oficiales del Camino del Vino del Empordà
+            </referencia>
+            <referencia url="https://es.wikipedia.org/wiki/Denominaci%C3%B3n_de_origen_Empord%C3%A0">
+                Wikipedia — Denominación de Origen Empordà: historia y variedades
+            </referencia>
+            <referencia url="https://www.thegourmetjournal.com/food-and-wine-travel/ruta-del-vino-do-emporda-una-escapada-entre-vinedos/">
+                The Gourmet Journal — Ruta del Vino DO Empordà, escapada entre viñedos
+            </referencia>
+        </referencias>
+ 
+        <recomendacion>9</recomendacion>
+ 
+        <hitos>
+            <!-- HITO 1 -->
+            <hito id="h3_01">
+                <nombre>Castillo y Museo del Vino de Peralada</nombre>
+                <descripcion>
+                    El castillo medieval de Peralada alberga el Museo del Vino, con una colección
+                    vitivinícola única de peso histórico indudable, además de la bodega Castillo
+                    Peralada, referente de la DO Empordà. La villa medieval es uno de los pueblos
+                    más bonitos del Alt Empordà.
+                </descripcion>
+                <coordenadas>
+                    <longitud>3.01410</longitud>
+                    <latitud>42.30510</latitud>
+                    <altitud>46</altitud>
+                </coordenadas>
+                <distancia unidad="m">0</distancia>
+                <fotos>
+                <foto url="fotos/emporda/peralada_castillo_01.jpg"
+                        descripcion="Castillo medieval de Peralada y su bodega"/>
+                <foto url="fotos/emporda/peralada_museo_vino_01.jpg"
+                        descripcion="Sala de exposición del Museo del Vino del Castillo de Peralada"/>
+                <foto url="fotos/emporda/peralada_cata_01.jpg"
+                        descripcion="Cata de vinos DO Empordà en las bodegas del castillo"/>
+                </fotos>
+                <videos>
+                <video url="videos/emporda/peralada_bodega.mp4"
+                        descripcion="Visita a las cavas y bodegas del Castillo de Peralada"/>
+                </videos>
+            </hito>
+
+            <puntoRuta seq="1">
+                <coordenadas>
+                    <longitud>3.01200</longitud>
+                    <latitud>42.29500</latitud>
+                    <altitud>42</altitud>
+                </coordenadas>
+                <distancia unidad="km">1.10</distancia>
+            </puntoRuta>
+
+            <!-- HITO 2 -->
+            <hito id="h3_02">
+                <nombre>Empordàlia — Cooperativa de Vino y Aceite de Mollet de Peralada</nombre>
+                <descripcion>
+                    Cooperativa formada por pequeños productores del Empordà que elaboran vino y
+                    aceite de oliva desde hace generaciones. Ofrece catas mariadas con quesos
+                    artesanos de la zona, siendo uno de los pasos más auténticos de la ruta.
+                </descripcion>
+                <coordenadas>
+                    <longitud>3.00870</longitud>
+                    <latitud>42.28940</latitud>
+                    <altitud>38</altitud>
+                </coordenadas>
+                <distancia unidad="km">2.1</distancia>
+                <fotos>
+                <foto url="fotos/emporda/empordalia_cooperativa_01.jpg"
+                        descripcion="Cooperativa Empordàlia en Mollet de Peralada"/>
+                <foto url="fotos/emporda/empordalia_cata_quesos_01.jpg"
+                        descripcion="Maridaje de vinos DO Empordà con quesos artesanos de la comarca"/>
+                </fotos>
+            </hito>
+            
+
+            <puntoRuta seq="2">
+                <coordenadas>
+                    <longitud>2.99800</longitud>
+                    <latitud>42.28000</latitud>
+                    <altitud>35</altitud>
+                </coordenadas>
+                <distancia unidad="km">1.50</distancia>
+            </puntoRuta>
+        
+            <puntoRuta seq="3">
+                <coordenadas>
+                    <longitud>2.98200</longitud>
+                    <latitud>42.27100</latitud>
+                    <altitud>28</altitud>
+                </coordenadas>
+                <distancia unidad="km">2.10</distancia>
+            </puntoRuta>
+            
+             <!-- HITO 3 -->
+            <hito id="h3_03">
+                <nombre>Mercat Municipal de Figueres — Cebolla de Figueres</nombre>
+                <descripcion>
+                    El mercado municipal de Figueres es el escaparate de la gastronomía del Alt
+                    Empordà: la célebre cebolla de Figueres (IGP), butifarra dulce empordanesa,
+                    buñuelos y productos de temporada. A pocos metros se encuentra el Teatro-Museo
+                    Dalí, visita obligada de la capital del Alt Empordà.
+                </descripcion>
+                <coordenadas>
+                    <longitud>2.96460</longitud>
+                    <latitud>42.26750</latitud>
+                    <altitud>30</altitud>
+                </coordenadas>
+                <distancia unidad="km">14.8</distancia>
+                <fotos>
+                <foto url="fotos/emporda/figueres_mercat_01.jpg"
+                        descripcion="Mercat Municipal de Figueres con los productos del Alt Empordà"/>
+                <foto url="fotos/emporda/figueres_cebolla_01.jpg"
+                        descripcion="Cebolla de Figueres (IGP), producto estrella de la comarca"/>
+                <foto url="fotos/emporda/figueres_butifarra_01.jpg"
+                        descripcion="Butifarra dulce empordanesa en el mercado de Figueres"/>
+                </fotos>
+                <videos>
+                <video url="videos/emporda/figueres_mercat.mp4"
+                        descripcion="Recorrido por los puestos del Mercat Municipal de Figueres"/>
+                </videos>
+            </hito>
+        
+            <puntoRuta seq="4">
+                <coordenadas>
+                    <longitud>2.98300</longitud>
+                    <latitud>42.27800</latitud>
+                    <altitud>32</altitud>
+                </coordenadas>
+                <distancia unidad="km">2.20</distancia>
+            </puntoRuta>
+        
+            <puntoRuta seq="5">
+                <coordenadas>
+                    <longitud>3.01500</longitud>
+                    <latitud>42.30200</latitud>
+                    <altitud>75</altitud>
+                </coordenadas>
+                <distancia unidad="km">4.80</distancia>
+            </puntoRuta>
+            
+            <!-- HITO 4 -->
+            <hito id="h3_04">
+                <nombre>Bodega Mas Llunes — Garriguella</nombre>
+                <descripcion>
+                    Bodega familiar en Garriguella que elabora vinos sobre suelos de pizarra y
+                    granito azotados por la tramontana. Su sala de barricas combina luz, música
+                    e imágenes para una cata sensorial con garnacha y cariñena autóctonas.
+                </descripcion>
+                <coordenadas>
+                    <longitud>3.04720</longitud>
+                    <latitud>42.32980</latitud>
+                    <altitud>115</altitud>
+                </coordenadas>
+                <distancia unidad="km">12.3</distancia>
+                <fotos>
+                <foto url="fotos/emporda/mas_llunes_vinedos_01.jpg"
+                        descripcion="Viñedos de Mas Llunes en Garriguella sobre suelos de pizarra"/>
+                <foto url="fotos/emporda/mas_llunes_barricas_01.jpg"
+                        descripcion="Sala de barricas de Mas Llunes con la cata sensorial"/>
+                </fotos>
+            </hito>
+        
+            <puntoRuta seq="6">
+                <coordenadas>
+                    <longitud>3.07500</longitud>
+                    <latitud>42.35500</latitud>
+                    <altitud>88</altitud>
+                </coordenadas>
+                <distancia unidad="km">3.90</distancia>
+            </puntoRuta>
+        
+            <puntoRuta seq="7">
+                <coordenadas>
+                    <longitud>3.10200</longitud>
+                    <latitud>42.35800</latitud>
+                    <altitud>45</altitud>
+                </coordenadas>
+                <distancia unidad="km">3.20</distancia>
+            </puntoRuta>
+
+            <!-- HITO 5 -->
+            <hito id="h3_05">
+                <nombre>Restaurante Miramar — Llançà</nombre>
+                <descripcion>
+                    Restaurante frente al Mediterráneo en Llançà, referente de la alta cocina
+                    empordanesa con estrella Michelin. El chef Paco Pérez ofrece una cocina de
+                    producto de mar y montaña, con las anchoas de l'Escala y los pescados de
+                    la Costa Brava como protagonistas.
+                </descripcion>
+                <coordenadas>
+                    <longitud>3.15280</longitud>
+                    <latitud>42.36190</latitud>
+                    <altitud>5</altitud>
+                </coordenadas>
+                <distancia unidad="km">18.6</distancia>
+                <fotos>
+                <foto url="fotos/emporda/miramar_fachada_01.jpg"
+                        descripcion="Restaurante Miramar en el Paseo Marítimo de Llançà"/>
+                <foto url="fotos/emporda/miramar_plato_01.jpg"
+                        descripcion="Plato de cigalas con fondo yodado del chef Paco Pérez"/>
+                <foto url="fotos/emporda/llanca_playa_01.jpg"
+                        descripcion="Bahía de Llançà y playa de Garbet desde el paseo marítimo"/>
+                </fotos>
+                <videos>
+                <video url="videos/emporda/miramar_cocina.mp4"
+                        descripcion="El chef Paco Pérez en los fogones del Restaurante Miramar"/>
+                </videos>
+            </hito>
+        
+            <puntoRuta seq="8">
+                <coordenadas>
+                    <longitud>3.16800</longitud>
+                    <latitud>42.37500</latitud>
+                    <altitud>20</altitud>
+                </coordenadas>
+                <distancia unidad="km">2.30</distancia>
+            </puntoRuta>
+        
+            <puntoRuta seq="9">
+                <coordenadas>
+                    <longitud>3.17200</longitud>
+                    <latitud>42.38500</latitud>
+                    <altitud>35</altitud>
+                </coordenadas>
+                <distancia unidad="km">1.50</distancia>
+            </puntoRuta>
+
+            <!-- HITO 6 -->
+            <hito id="h3_06">
+                <nombre>Bodega Finca Garbet — Colera</nombre>
+                <descripcion>
+                    Viñedo excepcional de la DO Empordà situado en terrazas sobre el mar en Colera,
+                    dentro del Parque Natural del Cap de Creus. Ofrece la imagen más espectacular
+                    de la ruta: vides plantadas a escasos metros del Mediterráneo entre acantilados.
+                </descripcion>
+                <coordenadas>
+                    <longitud>3.17940</longitud>
+                    <latitud>42.39200</latitud>
+                    <altitud>45</altitud>
+                </coordenadas>
+                <distancia unidad="km">6.4</distancia>
+                <fotos>
+                <foto url="fotos/emporda/finca_garbet_vinedos_01.jpg"
+                        descripcion="Viñedos de Finca Garbet en terrazas sobre el mar en Colera"/>
+                <foto url="fotos/emporda/finca_garbet_vistas_01.jpg"
+                        descripcion="Vistas del Mediterráneo desde las vides de Finca Garbet"/>
+                <foto url="fotos/emporda/finca_garbet_cata_01.jpg"
+                        descripcion="Cata de vinos en el mirador de Finca Garbet"/>
+                </fotos>
+            </hito>
+        
+            <puntoRuta seq="10">
+                <coordenadas>
+                    <longitud>3.19500</longitud>
+                    <latitud>42.37800</latitud>
+                    <altitud>55</altitud>
+                </coordenadas>
+                <distancia unidad="km">3.10</distancia>
+            </puntoRuta>
+        
+            <puntoRuta seq="11">
+                <coordenadas>
+                    <longitud>3.23100</longitud>
+                    <latitud>42.34500</latitud>
+                    <altitud>30</altitud>
+                </coordenadas>
+                <distancia unidad="km">5.20</distancia>
+            </puntoRuta>
+        
+            <puntoRuta seq="12">
+                <coordenadas>
+                    <longitud>3.26800</longitud>
+                    <latitud>42.30200</latitud>
+                    <altitud>80</altitud>
+                </coordenadas>
+                <distancia unidad="km">7.50</distancia>
+            </puntoRuta>
+
+            <!-- HITO 7 -->
+            <hito id="h3_07">
+                <nombre>Cadaqués — Pueblo y gastronomía final</nombre>
+                <descripcion>
+                    Cadaqués, considerado por Dalí el pueblo más bonito del mundo, es el colofón
+                    de la ruta. Su casco antiguo encalado, el suquet de peix tradicional y los
+                    restaurantes del paseo marítimo cierran la experiencia gastronómica del Empordà
+                    con el Parque Natural del Cap de Creus como telón de fondo.
+                </descripcion>
+                <coordenadas>
+                    <longitud>3.28340</longitud>
+                    <latitud>42.28830</latitud>
+                    <altitud>10</altitud>
+                </coordenadas>
+                <distancia unidad="km">22.1</distancia>
+                <fotos>
+                <foto url="fotos/emporda/cadaques_casco_01.jpg"
+                        descripcion="Casco antiguo encalado de Cadaqués con la iglesia de Santa Maria"/>
+                <foto url="fotos/emporda/cadaques_suquet_01.jpg"
+                        descripcion="Suquet de peix, plato tradicional de Cadaqués"/>
+                <foto url="fotos/emporda/cadaques_puerto_01.jpg"
+                        descripcion="Puerto de Cadaqués con el Cap de Creus al fondo"/>
+                <foto url="fotos/emporda/cadaques_atardecer_01.jpg"
+                        descripcion="Atardecer sobre la bahía de Cadaqués"/>
+                </fotos>
+                <videos>
+                <video url="videos/emporda/cadaques_pueblo.mp4"
+                        descripcion="Paseo por el casco antiguo y el puerto de Cadaqués"/>
+                <video url="videos/emporda/cadaques_cap_creus.mp4"
+                        descripcion="El Parque Natural del Cap de Creus desde Cadaqués"/>
+                </videos>
+            </hito>
+        </hitos>
+
+        <planimetria>planimetria_ruta3.kml</planimetria>
+        <altimetria>altimetria_ruta3.svg</altimetria>
+    </ruta>
+</rutas>
