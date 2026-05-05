@@ -28,6 +28,7 @@ section h3 {
     margin-bottom: 0.2rem;
 }
 
+/* Selector descendente (especificidad 0-0-0-2) */
 section p {
   margin-top: 0.2rem;
 }
@@ -38,37 +39,38 @@ h2, h3, h4, h5, h6 {
     /* Advertencia: color de fondo heredado de body #000000*/
 }
 
-/* Especificidad: 003, 003 */
+/* Selectores descendentes (especificidad 0-0-0-3) */
 header h1 a, header nav a {
     color: #DBBDCC; /* Redefinición necesaria: los enlaces no heredan automáticamente el color del header */
     text-decoration-line: none;
     /* Comentario accesibilidad: Color heredado de header (#ffffff) confirmado */
 }
 
-/* Especificidad 0-0-1-1 */
+/* Selectores descendentes (especificidad 0-0-1-3) */
 header h1 a:hover,  header nav a:hover{
     color: #FFEA70; 
     /* Advertencia: color de fondo heredado de body #000000*/
 }
 
-/* Especificidad: 0-1-0 */
+/* Selector de clase (especificidad 0-0-1-0) */
 .activo {
     color: #FFEA70; /* Color modificado para cumplir contraste WCAG sobre fondo */
     /* Comentario accesibilidad: Contraste suficiente con fondo circundante (#3232e8) */
 }
+
 /* Selector adyacente: especificidad 0-0-0-2 */
 header + p {
     font-size: 0.9em;
 }
 
-/* Especificidad: 001 */
+/* Selector de tipo (especificidad 0-0-0-1) */
 table {
     border: 0.1rem solid #3B3038;
     background-color: #fdf8ff;
     color: #3B3038;
 }
 
-/* Especificidad: 001 */
+/* Selector de tipo (especificidad 0-0-0-1) */
 caption {
     font-size: 1rem; 
     font-weight: bold;
@@ -78,7 +80,7 @@ caption {
     /* Comentario accesibilidad: Contraste suficiente con fondo tabla (#fdf8ff) */
 }
 
-/* Especificidad: 012 */
+/* Selector descendente (especificidad 0-0-0-2) */
 tbody tr {
     background-color: #ffffff;
     color: #000000;
@@ -87,7 +89,7 @@ tbody tr {
 }
 
 /* Bordes de celdas */
-/* Especificidad: 001 */
+/* Selectores de tipo agrupados (especificidad 0-0-0-1, 0-0-0-1) */
 th, td {
     border: 0.05rem solid #DEC4D3;
     /* Comentario accesibilidad: No afecta legibilidad */
