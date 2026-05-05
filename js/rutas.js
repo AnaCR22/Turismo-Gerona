@@ -3,144 +3,158 @@
 class Rutas {
 
     constructor() {
-        this.comprobarApiFile();
-        this.leerArchivoHTML();
+        this.cargarXML();
     }
 
-    comprobarApiFile() {
-        if (!(window.File && window.FileReader && window.FileList && window.Blob)) {
-            const p = document.createElement("p");
-            p.textContent = "Este navegador no soporta la API File de HTML5.";
-            document.body.appendChild(p);
-        }
-    }
-
-    leerArchivoHTML() {
-        const body = document.querySelector("body");
-        const input = body.querySelector("input");
-        
-        input.addEventListener("change", () => {
-            const archivo = input.files[0];
-            if (!archivo) return;
-
-            const lector = new FileReader();
-
-            lector.onload = () => {
-                const contenido = lector.result;
-                this.mostrarContenidoHTML(contenido);
-            };
-
-            lector.readAsText(archivo);
+    cargarXML() {
+        $.ajax({
+            url: "xml/rutas.xml",
+            dataType: "xml",
+            method: "GET",
+            success: (xml) => this.mostrarContenidoRutas(xml),
+            error: (error) => console.error("Error al obtener las rutas: " + error.statusText)
         });
     }
 
-    mostrarContenidoHTML(texto) {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(texto, "text/html");
+    mostrarContenidoRutas(xml) {
+        const main = document.querySelector("main");
+        // Encontrar las rutas
+        const rutas = xml.querySelectorAll("ruta");
 
-        const bodyArchivo = doc.querySelector("body");
+        rutas.forEach((ruta) => {
+            const nombre = ruta.querySelector("nombre").textContent;
+            const tipo = ruta.querySelector("tipo").textContent;
+            const transporte = ruta.querySelector("transporte").textContent;
+            const duracion = ruta.querySelector("duracion").textContent;
+            const descripcion = ruta.querySelector("descripcion").textContent.trim();
+            const agencia = ruta.querySelector("agencia").textContent;
+            const adecuada = ruta.querySelector("adecuadaPara").textContent.trim();
+            const recomendacion = ruta.querySelector("recomendacion").textContent;
+            
+            const seccion = document.createElement("section");
+            const h3 = document.createElement("h3");
+            h3.textContent = nombre;
+            seccion.appendChild(h3);
 
-        const body = document.querySelector("body");
+            const pTipo = document.createElement("p");
+            pTipo.textContent = "Tipo: " + tipo + " | Transporte: " + transporte;
+            seccion.appendChild(pTipo);
 
-        const h3 = document.createElement("h3");
-        h3.textContent = "Información del Circuito (Archivo cargado)";
-        document.body.appendChild(h3);
+            const pDuracion = document.createElement("p");
+            pDuracion.textContent = "Duración: " + duracion + " | Agencia: " + agencia;
+            seccion.appendChild(pDuracion);
 
-        const contenedor = document.createElement("section");
-        const elementos = Array.from(bodyArchivo.children);
+            const pDesc = document.createElement("p");
+            pDesc.textContent = descripcion;
+            seccion.appendChild(pDesc);
 
-        for (let elem of elementos) {
-            const clon = elem.cloneNode(true);
-            contenedor.appendChild(clon);
-        }
+            const pAdecuada = document.createElement("p");
+            pAdecuada.textContent = "Adecuada para: " + adecuada;
+            seccion.appendChild(pAdecuada);
 
-        document.body.appendChild(contenedor);
+            const pRec = document.createElement("p");
+            pRec.textContent = "Recomendación: " + recomendacion + "/10";
+            seccion.appendChild(pRec);
+
+            // Hitos
+            const hitos = ruta.querySelectorAll("hito");
+
+            hitos.forEach((hito) => {
+                const nombreHito = hito.querySelector("nombre").textContent;
+                const descHito = hito.querySelector("descripcion").textContent.trim();
+                const distancia = hito.querySelector("distancia").textContent;
+                const unidad = hito.querySelector("distancia").getAttribute("unidad");
+
+                const artHito = document.createElement("article");
+
+                const h4 = document.createElement("h4");
+                h4.textContent = nombreHito;
+                artHito.appendChild(h4);
+
+                const pDescHito = document.createElement("p");
+                pDescHito.textContent = descHito;
+                artHito.appendChild(pDescHito);
+
+                const pDist = document.createElement("p");
+                pDist.textContent = "Distancia desde el anterior: " + distancia + " " + unidad;
+                artHito.appendChild(pDist);
+
+                // Fotos del hito
+                const fotos = hito.querySelectorAll("foto");
+                fotos.forEach((foto) => {
+                    const url = foto.getAttribute("url");
+                    const desc = foto.getAttribute("descripcion") || "";
+
+                    const img = document.createElement("img");
+                    img.src = url;
+                    img.alt = desc;
+                    artHito.appendChild(img);
+                });
+
+                seccion.appendChild(artHito);
+            });
+
+            // Altimetría SVG
+            const archivoSVG = ruta.querySelector("altimetria").textContent;
+            new CargadorSVG(archivoSVG, seccion);
+
+            // Planimetría KML
+            const archivoKML = ruta.querySelector("planimetria").textContent;
+            new CargadorKML(archivoKML, seccion);
+
+            main.appendChild(seccion);
+        });
     }
 }
 
-const circuito = new Circuito();
-//body>div
 
 class CargadorSVG {
 
-    constructor() {
-        this.configurarInput();
+    constructor(archivoSVG, contenedor) {
+        this.cargarSVG(archivoSVG, contenedor);
     }
 
-    configurarInput() {
-        const body = document.querySelector("body");
-        const inputs = body.querySelectorAll("input");
-
-        const inputSVG = inputs[1]; 
-
-        inputSVG.addEventListener("change", () => {
-            const archivo = inputSVG.files[0];
-            if (archivo) {
-                this.leerArchivoSVG(archivo);
-            }
+    cargarSVG(archivoSVG, contenedor) {
+        $.ajax({
+            url: "xml/" +  archivoSVG,
+            dataType: "text",
+            method: "GET",
+            success: (textoSVG) => this.insertarSVG(textoSVG, contenedor),
+            error: (error) => console.error("Error al obtener archivo: " + archivoSVG)
         });
     }
 
-    leerArchivoSVG(archivo) {
-        const lector = new FileReader();
 
-        lector.onload = () => {
-            const svgTexto = lector.result;
-            this.insertarSVG(svgTexto);
-        };
-
-        lector.readAsText(archivo);
-    }
-
-    insertarSVG(svgTexto) {
+    insertarSVG(textoSVG, contenedor) {
         const parser = new DOMParser();
-        const docSVG = parser.parseFromString(svgTexto, "image/svg+xml");
+        const docSVG = parser.parseFromString(textoSVG, "image/svg+xml");
 
         const svg = docSVG.documentElement;
 
-        const h3 = document.createElement("h3");
-        h3.textContent = "Altimetría del Circuito (Archivo SVG)";
+        const h4 = document.createElement("h4");
+        h4.textContent = "Altimetría de la ruta";
+        contenedor.appendChild(h4);
 
-        const contenedor = document.createElement("section");
-
-        const svgClon = svg.cloneNode(true);
-        contenedor.appendChild(svgClon);
-
-        const body = document.querySelector("body");
-        body.appendChild(h3);
-        body.appendChild(contenedor);
+        contenedor.appendChild(svg);
     }
 }
-const cargadorSVG = new CargadorSVG();
 
 class CargadorKML {
 
-    constructor() {
-        this.configurarInput();
-        this.inicializarMapa();
+    constructor(archivoKML, contenedor) {
+        this.inicializarMapa(contenedor);
+        this.cargarKML(archivoKML);
     }
 
-    configurarInput() {
-        const body = document.querySelector("body");
-        const inputs = body.querySelectorAll("input");
+    inicializarMapa(contenedor) {
+        const h4 = document.createElement("h4");
+        h4.textContent = "Planimetría de la ruta";
+        contenedor.appendChild(h4);
 
-        const inputKML = inputs[2];
-
-        inputKML.addEventListener("change", () => {
-            const archivo = inputKML.files[0];
-            if (archivo) {
-                this.leerArchivoKML(archivo);
-            }
-        });
-    }
-
-
-    inicializarMapa() {
-        const body = document.querySelector("body");
-        const divs = body.querySelectorAll("div");
-
-        // Primer <div> para el mapa dinámico
-        this.divMapa = divs[0];
+        this.divMapa = document.createElement("div");
+        this.divMapa.style.width = "100%";
+        this.divMapa.style.height = "400px";
+        contenedor.appendChild(this.divMapa);
 
         this.mapa = new google.maps.Map(this.divMapa, {
             center: { lat: 0, lng: 0 },
@@ -148,47 +162,43 @@ class CargadorKML {
         });
     }
 
-    leerArchivoKML(archivo) {
-        const lector = new FileReader();
-
-        lector.onload = () => {
-            const textoKML = lector.result;
-
-            const parser = new DOMParser();
-            const xml = parser.parseFromString(textoKML, "text/xml");
-            console.log("Texto KML leído:");
-            console.log(textoKML);
-
-            console.log("XML parseado:");
-            console.log(xml);
-
-            console.log("Coordenadas encontradas:");
-            console.log(xml.querySelectorAll("coordinates"));
-            console.log(xml.querySelectorAll("coordinates").length);
-
-            const coordsXML = xml.getElementsByTagNameNS(
-                "http://www.opengis.net/kml/2.2",
-                "coordinates"
-                );            
-                this.coordenadas = [];
-
-            for (let nodo of coordsXML) {
-                const texto = nodo.textContent.trim();
-                const puntos = texto.split(/\s+/);
-
-                for (let p of puntos) {
-                    const [lon, lat] = p.split(",").map(Number);
-
-                    this.coordenadas.push({ lat: lat, lon: lon });
-                }
-            }
-
-            this.insertarCapaKML();
-        };
-        lector.readAsText(archivo);
+    cargarKML(archivoKML) {
+        $.ajax({
+            url: "xml/" +  archivoKML,
+            dataType: "text",
+            method: "GET",
+            success: (textoKML) => this.procesarKML(textoKML),
+            error: (error) => console.error("Error al obtener archivo: " + archivoKML)
+        });
     }
 
-    insertarCapaKML() {
+
+    procesarKML(textoKML) {
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(textoKML, "text/xml");
+        
+        const coordsXML = xml.getElementsByTagNameNS(
+            "http://www.opengis.net/kml/2.2",
+            "coordinates"
+            );            
+        
+        this.coordenadas = [];
+
+        for (let nodo of coordsXML) {
+            const texto = nodo.textContent.trim();
+            const puntos = texto.split(/\s+/);
+
+            for (let p of puntos) {
+                const [lon, lat] = p.split(",").map(Number);
+
+                this.coordenadas.push({ lat: lat, lon: lon });
+            }
+        }
+
+        this.insertarKML();
+    }
+
+    insertarKML() {
         if (!this.coordenadas || this.coordenadas.length === 0) {
             console.error("No hay coordenadas para representar.");
             return;
@@ -199,7 +209,7 @@ class CargadorKML {
         new google.maps.Marker({
             position: { lat: origen.lat, lng: origen.lon },
             map: this.mapa,
-            title: "Punto de origen del circuito"
+            title: "Inicio de la ruta"
         });
 
         const ruta = this.coordenadas.map(p => ({ lat: p.lat, lng: p.lon }));
@@ -223,7 +233,4 @@ class CargadorKML {
         this.mapa.fitBounds(bounds);
     }
 
-}
-function iniciarMapa() {
-    new CargadorKML();
 }

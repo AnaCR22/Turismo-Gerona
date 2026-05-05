@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Camí de Ronda - Inicio</name>
+      <description>Punto de inicio de la ruta</description>
+      <Point>
+        <coordinates>3.18450,41.88900,3</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Calella de Palafrugell</name>
+      <description>Antiguo pueblo de pescadores con arcadas frente al mar y casas blancas.</description>
+      <Point>
+        <coordinates>3.18450,41.88900,3</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Jardín Botánico de Cap Roig</name>
+      <description>Jardín de 17 hectáreas creado en 1927.</description>
+      <Point>
+        <coordinates>3.19050,41.89300,45</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Faro de Sant Sebastià</name>
+      <description>Faro construido en 1857. Tiene un mirador con vistas desde el Cap de Creus hasta el Montgrí.</description>
+      <Point>
+        <coordinates>3.20196,41.89678,170</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Playa de Llafranc</name>
+      <description>Playa de arena gruesa de 330 m en forma de media luna.</description>
+      <Point>
+        <coordinates>3.19450,41.89350,2</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Platja de Tamariu</name>
+      <description>Cala de 180 m de arena dorada rodeada de pinos. Ambiente familiar y restaurantes de pescado en primera línea.</description>
+      <Point>
+        <coordinates>3.20600,41.91870,2</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <name>Camí de Ronda</name>
+    <Placemark>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellation>1</tessellation>
+        <coordinates>3.18450,41.88900,3
+3.18450,41.88900,3
+3.18600,41.89050,15
+3.18850,41.89200,35
+3.19050,41.89300,45
+3.19300,41.89400,60
+3.19600,41.89500,95
+3.19900,41.89580,140
+3.20196,41.89678,170
+3.20050,41.89750,120
+3.19700,41.89500,50
+3.19450,41.89350,2
+3.19700,41.89600,20
+3.20200,41.90200,55
+3.20800,41.90900,40
+3.20700,41.91500,25
+3.20600,41.91870,2</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </LineString>
+      <Style>
+        <LineStyle>
+          <color>#ff0000ff</color>
+          <width>5</width>
+        </LineStyle>
+      </Style>
+    </Placemark>
+  </Document>
+</kml>

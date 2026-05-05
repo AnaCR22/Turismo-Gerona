@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Ruta Monumental del Casco Histórico de Girona - Inicio</name>
+      <description>Punto de inicio de la ruta</description>
+      <Point>
+        <coordinates>2.82388,41.98457,68</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Pont de les Peixateries Velles (Pont Eiffel)</name>
+      <description>Puente metálico rojo construido en 1876. Conecta el Mercadal con la Rambla de la Lliberta.</description>
+      <Point>
+        <coordinates>2.82388,41.98457,68</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>El Call Jueu (Barrio Judío)</name>
+      <description>Una de las juderías medievales mejor conservadas de Europa.</description>
+      <Point>
+        <coordinates>2.82520,41.98600,78</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Catedral de Santa Maria de Girona</name>
+      <description>Templo construido entre los siglos XI y XVIII con elementos románicos, góticos y barrocos.</description>
+      <Point>
+        <coordinates>2.82631,41.98743,93</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Banys Àrabs (Baños Árabes)</name>
+      <description>Edificio románico de 1194. Es el conjunto de baños románicos mejor conservado de Cataluña.</description>
+      <Point>
+        <coordinates>2.82750,41.98830,86</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Basílica de Sant Feliu</name>
+      <description>Iglesia levantada entre los siglos XII y XVII sobre una necrópolis romana.</description>
+      <Point>
+        <coordinates>2.82480,41.98640,74</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <name>Ruta Monumental del Casco Histórico de Girona</name>
+    <Placemark>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellation>1</tessellation>
+        <coordinates>2.82388,41.98457,68
+2.82388,41.98457,68
+2.82430,41.98490,70
+2.82485,41.98530,72
+2.82520,41.98600,78
+2.82555,41.98650,82
+2.82590,41.98700,88
+2.82631,41.98743,93
+2.82680,41.98770,90
+2.82750,41.98830,86
+2.82700,41.98790,84
+2.82600,41.98720,80
+2.82530,41.98680,76
+2.82480,41.98640,74</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </LineString>
+      <Style>
+        <LineStyle>
+          <color>#ff0000ff</color>
+          <width>5</width>
+        </LineStyle>
+      </Style>
+    </Placemark>
+  </Document>
+</kml>

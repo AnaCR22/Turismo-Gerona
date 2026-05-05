@@ -51,9 +51,9 @@ header h1 a:hover,  header nav a:hover{
     /* Advertencia: color de fondo heredado de body #000000*/
 }
 
-/* Especificidad: 010 */
-.active {
-    color: #FFEA70; /* Color modificado para cumplir contraste WCAG sobre fondo #3232e8 */
+/* Especificidad: 0-1-0 */
+.activo {
+    color: #FFEA70; /* Color modificado para cumplir contraste WCAG sobre fondo */
     /* Comentario accesibilidad: Contraste suficiente con fondo circundante (#3232e8) */
 }
 /* Selector adyacente: especificidad 0-0-0-2 */

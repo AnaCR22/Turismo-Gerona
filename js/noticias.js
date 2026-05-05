@@ -16,16 +16,13 @@ class Noticias {
             `&language=es` +
             `&limit=5`;
             
-        try{
-            const respuesta = await fetch(urlCompleta);
-            if (!respuesta.ok) {
-                throw new Error("Error al obtener las noticias");
-            }            
-            const json = await respuesta.json();
-            this.procesarInformacion(json);
-        } catch (error){
-            console.error("Error al obtener las noticias: " +  error.message);
-        }
+        $.ajax({
+            url: urlCompleta,
+            dataType: "json",
+            method: "GET",
+            success: (json) => this.procesarInformacion(json),
+            error: (error) => console.error("Error al obtener las noticias: " + error.statusText)
+        });
     }
 
     procesarInformacion(json) {

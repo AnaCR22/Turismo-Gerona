@@ -14,12 +14,13 @@
 
     <link rel="stylesheet" href="estilo/estilo.css" />
     <link rel="stylesheet" href="estilo/layout.css" />
+    <script src="js/juego.js"></script>
 </head>
 
 <body>
     <header>
         <h1>
-            <a href="index.html" title="Página de incio">Gerona-Desktop</a>
+            <a href="index.html" title="Página de inicio">Gerona-Desktop</a>
         </h1>
 
         <nav>
@@ -27,7 +28,8 @@
             <a href="gastronomia.html">Gastronomía</a>
             <a href="rutas.html">Rutas</a>
             <a href="meteorologia.html">Meteorología</a>
-            <a href="juego.html" class="active">Juego</a>
+            <a href="juego.html" class="activo">Juego</a>
+            <a href="php/reservas.php">Reservas</a>
             <a href="ayuda.html">Ayuda</a>
         </nav>
     </header>
@@ -35,11 +37,11 @@
     <p>Estás en: <a href="index.html" title="Página de incio">Inicio</a> >> <strong>Juego</strong></p>
 
     <main>
-        <h2>Juegos de Gerona-Desktop</h2>
-
-        <ul>
-            
-        </ul>
+        <h2>Juego de preguntas sobre Gerona-Desktop</h2>
     </main>
+
+    <script>
+        const juego = new Juego();
+    </script>
 </body>
 </html>

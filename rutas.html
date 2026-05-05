@@ -15,24 +15,25 @@
     <link rel="stylesheet" href="estilo/estilo.css" />
     <link rel="stylesheet" href="estilo/layout.css" />
 
-    <link href="https://api.mapbox.com/mapbox-gl-js/v3.17.0-beta.1/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v3.17.0-beta.1/mapbox-gl.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl0BPcJrDVx6QE0Ju1Az3tphXZFQ6ITCs"></script>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script> 
     <script src="js/rutas.js"></script>
 </head>
 
 <body>
     <header>
         <h1>
-            <a href="index.html" title="Página de incio">Gerona-Desktop</a>
+            <a href="index.html" title="Página de inicio">Gerona-Desktop</a>
         </h1>
 
         <nav>
             <a href="index.html">Inicio</a>
             <a href="gastronomia.html">Gastronomía</a>
-            <a href="rutas.html" class="active">Rutas</a>
+            <a href="rutas.html" class="activo">Rutas</a>
             <a href="meteorologia.html">Meteorología</a>
             <a href="juego.html">Juego</a>
+            <a href="php/reservas.php">Reservas</a>
             <a href="ayuda.html">Ayuda</a>
         </nav>
     </header>
@@ -41,18 +42,10 @@
 
     <main>
         <h2>Rutas con atractivo turístico en Gerona</h2>
-
-        <h3>Información de las rutas</h3>
-        <label for="archivoRutas">Abrir HTML</label>
-        <input type="file" id="archivoRutas" accept=".html">
-
-        <h3>Altimetría de las rutas</h3>
-        <label for="SVGRutas">Abrir SVG</label>
-        <input type="file" id="SVGRutas" accept=".svg">
-
-        <h3>Vista de las rutas en el mapa</h3>
-        <label for="KMLRutas">Abrir KML</label>
-        <input type="file" id="KMLRutas" accept=".kml">
     </main>
+
+    <script>
+        const rutas = new Rutas();
+    </script>
 </body>
 </html>

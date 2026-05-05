@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rutas SYSTEM "rutas.dtd">
-<rutas>
+<rutas xmlns="http://www.uniovi.es"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.uniovi.es rutas.xsd">
     <ruta id="R01">
         <nombre>Ruta Monumental del Casco Histórico de Girona</nombre>
         <tipo>Arquitectura y monumentos</tipo>

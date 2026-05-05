@@ -23,15 +23,16 @@
 <body>
     <header>
         <h1>
-            <a href="index.html" title="Página de incio">Gerona-Desktop</a>        
+            <a href="index.html" title="Página de inicio">Gerona-Desktop</a>        
         </h1>
 
         <nav>
             <a href="index.html">Inicio</a>
             <a href="gastronomia.html">Gastronomía</a>
             <a href="rutas.html">Rutas</a>
-            <a href="meteorologia.html" class="active">Meteorología</a>
+            <a href="meteorologia.html" class="activo">Meteorología</a>
             <a href="juego.html">Juego</a>
+            <a href="php/reservas.php">Reservas</a>
             <a href="ayuda.html">Ayuda</a>
         </nav>
     </header>
@@ -43,7 +44,7 @@
 
     <script>
         let ciudad = new Ciudad("Gerona", "gerundense"); 
-
+        ciudad.rellenarDatos(108666 , 41.9794, 2.8214);
         ciudad.getMeteorologiaCiudad();
     </script>
 </body>

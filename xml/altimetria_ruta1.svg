@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+  <polyline points="80.00,420.00 80.00,420.00 128.55,392.80 181.97,365.60 298.50,284.00 356.76,229.60 419.88,148.00 497.57,80.00 550.98,120.80 638.38,175.20 691.79,202.40 788.90,256.80 852.02,311.20 920.00,338.40 920.00,420.00 80.00,420.00" stroke="red" fill="#ffcccc" stroke-width="2" />
+  <line x1="80.0" y1="420.0" x2="920.0" y2="420.0" stroke="black" stroke-width="2" />
+  <line x1="80.0" y1="420.0" x2="80.0" y2="80.0" stroke="black" stroke-width="2" />
+  <text x="80.0" y="440.0" font-size="11">0 m</text>
+  <text x="900.0" y="440.0" font-size="11">865 m</text>
+  <text x="25.0" y="425.0" font-size="11">68 m</text>
+  <text x="25.0" y="85.0" font-size="11">93 m</text>
+  <text x="500.0" y="460.0" font-size="16" style="text-anchor: middle;">Distancia (m)</text>
+  <text x="40.0" y="250.0" font-size="16" style="writing-mode: tb; glyph-orientation-vertical: 0;">Altitud (m)</text>
+</svg>

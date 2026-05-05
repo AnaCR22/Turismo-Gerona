@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Carrilet I: Olot - Girona - Inicio</name>
+      <description>Punto de inicio de la ruta</description>
+      <Point>
+        <coordinates>2.48900,42.17600,440</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Antigua Estación del Carrilet</name>
+      <description>Punto de partida de la vía verde. Olot es la capital de la comarca.</description>
+      <Point>
+        <coordinates>2.48900,42.17600,440</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Les Preses</name>
+      <description>Pueblo al pie del volcán Croscat.</description>
+      <Point>
+        <coordinates>2.50200,42.14900,510</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Les Planes d'Hostoles</name>
+      <description>Villa medieval. Conserva el castillo de Hostoles y un área de pícnic perfecta para descansar.</description>
+      <Point>
+        <coordinates>2.56200,42.07300,375</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Amer</name>
+      <description>Población con un monasterio benedictino y una plaza mayor.</description>
+      <Point>
+        <coordinates>2.60200,41.97000,185</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Girona - Parc de les Ribes del Ter</name>
+      <description>Final de etapa en Girona junto al río Ter.</description>
+      <Point>
+        <coordinates>2.81500,41.98100,70</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <name>Carrilet I: Olot - Girona</name>
+    <Placemark>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellation>1</tessellation>
+        <coordinates>2.48900,42.17600,440
+2.48900,42.17600,440
+2.49500,42.17200,435
+2.50800,42.16300,480
+2.50200,42.14900,510
+2.52000,42.13500,560
+2.53500,42.12800,589
+2.56000,42.10500,430
+2.56200,42.07300,375
+2.58000,42.05500,320
+2.60500,42.01500,210
+2.60200,41.97000,185
+2.63500,41.95500,155
+2.68000,41.95200,130
+2.74500,41.96800,100
+2.79000,41.97500,82
+2.81500,41.98100,70</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </LineString>
+      <Style>
+        <LineStyle>
+          <color>#ff0000ff</color>
+          <width>5</width>
+        </LineStyle>
+      </Style>
+    </Placemark>
+  </Document>
+</kml>

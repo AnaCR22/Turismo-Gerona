@@ -37,12 +37,12 @@
 <!ELEMENT distancia (#PCDATA)>
 <!ATTLIST distancia unidad CDATA #REQUIRED>
 
-<!ELEMENT fotos (foto, foto?, foto?, foto?, foto?)>
+<!ELEMENT fotos (foto+)>
 <!ELEMENT foto EMPTY>
 <!ATTLIST foto 
     url CDATA #REQUIRED
     descripcion CDATA #IMPLIED>
-<!ELEMENT videos (video?, video?, video?)>
+<!ELEMENT videos (video*)>
 <!ELEMENT video EMPTY>
 <!ATTLIST video 
     url CDATA #REQUIRED
