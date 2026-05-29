@@ -51,7 +51,7 @@ main > section > article > a {
 
 /* Selector de tipo - para mapas dinámicos (especificidad 0-0-0-1) */
 /* Se permite el uso del selector div para mapas dinámicos */
-div {
+section > div {
     width: 100%;
     margin-top: 1rem;
 }
@@ -68,6 +68,14 @@ article img {
     max-width: 37.5rem;
     height: auto;
 }
+
+/* Selector descendente (especificidad 0-0-0-2) */
+article video {
+    width: 100%;
+    max-width: 37.5rem;
+    height: auto;
+}
+
 
 /* Reglas para dispositivos móviles (320px a 799px)*/
 @media (min-width: 320px) and (max-width: 799px) {

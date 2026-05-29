@@ -2,7 +2,7 @@
 <xs:schema xmlns="http://www.uniovi.es" 
 	elementFormDefault="qualified" 
 	targetNamespace="http://www.uniovi.es"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">	
 	<xs:element name="rutas">
 		<xs:complexType>
 			<xs:sequence>
@@ -62,26 +62,54 @@
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="longitud">
-		<xs:simpleType>
-			<xs:restriction base="xs:decimal">
-				<xs:minInclusive value="-180" />
-				<xs:maxInclusive value="180" />
-			</xs:restriction>
-		</xs:simpleType>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="tipoLongitud">
+					<xs:attribute name="unidad" type="xs:string" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
 	</xs:element>
+	<xs:simpleType name="tipoLongitud">
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="-180" />
+			<xs:maxInclusive value="180" />
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:element name="latitud">
-		<xs:simpleType>
-			<xs:restriction base="xs:decimal">
-				<xs:minInclusive value="-90" />
-				<xs:maxInclusive value="90" />
-			</xs:restriction>
-		</xs:simpleType>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="tipoLatitud">
+					<xs:attribute name="unidad" type="xs:string" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
 	</xs:element>
-	<xs:element name="altitud" type="xs:decimal" />
+	<xs:simpleType name="tipoLatitud">
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="-90" />
+			<xs:maxInclusive value="90" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="altitud">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="tipoAltitud">
+					<xs:attribute name="unidad" type="xs:string" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tipoAltitud">
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0" />
+			<xs:maxInclusive value="9000" />
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:element name="referencias">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element minOccurs="3" maxOccurs="unbounded" ref="referencia" />
+				<xs:element minOccurs="1" maxOccurs="unbounded" ref="referencia" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -89,7 +117,8 @@
 		<xs:complexType>
 			<xs:simpleContent>
 				<xs:extension base="xs:string">
-					<xs:attribute name="url" type="xs:anyURI" />
+					<xs:attribute name="fuente" type="xs:string" use="required" />
+					<xs:attribute name="url" type="xs:anyURI" use="required" />
 				</xs:extension>
 			</xs:simpleContent>
 		</xs:complexType>
@@ -129,20 +158,30 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="coordenadas" />
-				<xs:element ref="distancia" />
 			</xs:sequence>
-			<xs:attribute name="seq" type="xs:positiveInteger" use="required" />
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="distancia">
 		<xs:complexType>
 			<xs:simpleContent>
-				<xs:extension base="xs:decimal">
-					<xs:attribute name="unidad" type="xs:string" use="required" />
+				<xs:extension base="tipoDistancia">
+					<xs:attribute name="unidad" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:NMTOKEN">
+								<xs:enumeration value="m" />
+								<xs:enumeration value="km" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
 				</xs:extension>
 			</xs:simpleContent>
 		</xs:complexType>
 	</xs:element>
+	<xs:simpleType name="tipoDistancia">
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0" />
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:element name="fotos">
 		<xs:complexType>
 			<xs:sequence>
@@ -159,7 +198,7 @@
 	<xs:element name="videos">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element minOccurs="0" maxOccurs="3" ref="video" />
+				<xs:element minOccurs="1" maxOccurs="3" ref="video" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

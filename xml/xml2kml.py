@@ -114,6 +114,7 @@ def main():
             '#ff0000ff', "5"
         )
 
+        nuevoKML.ver()
         nombre_archivo = ruta.findtext('u:planimetria', namespaces=NS)
         nuevoKML.escribir(nombre_archivo)
 

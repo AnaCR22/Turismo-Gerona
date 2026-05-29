@@ -2,75 +2,89 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <Placemark>
-      <name>Carrilet I: Olot - Girona - Inicio</name>
+      <name>Localizaciones de Juego de Tronos en Girona - Inicio</name>
       <description>Punto de inicio de la ruta</description>
       <Point>
-        <coordinates>2.48900,42.17600,440</coordinates>
+        <coordinates>2.826941,41.987316,104</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
     <Placemark>
-      <name>Antigua Estación del Carrilet</name>
-      <description>Punto de partida de la vía verde. Olot es la capital de la comarca.</description>
+      <name>Carrer del Bisbe Josep Cartañà</name>
+      <description>En esta calle, muy cerca de la catedral, encontramos unas escaleras que son la localización en la que Arya Stark, tras quedarse ciega, mendiga pidiendo dinero.</description>
       <Point>
-        <coordinates>2.48900,42.17600,440</coordinates>
+        <coordinates>2.826941,41.987316,104</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
     <Placemark>
-      <name>Les Preses</name>
-      <description>Pueblo al pie del volcán Croscat.</description>
+      <name>Escaleras de la catedral</name>
+      <description>Las escaleras de la catedral se convirtieron en el Gran Septo de Baelor, donde se rodó la escena en la que la reina Margaery realiza el camino de la vergüenza como lo realizó Cersei.</description>
       <Point>
-        <coordinates>2.50200,42.14900,510</coordinates>
+        <coordinates>2.825195,41.987367,86</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
     <Placemark>
-      <name>Les Planes d'Hostoles</name>
-      <description>Villa medieval. Conserva el castillo de Hostoles y un área de pícnic perfecta para descansar.</description>
+      <name>Portal de Sobreportes</name>
+      <description>En la escena donde aparece el Portal de Sobreportes, se ve a Jaime Lannister comandando a los soldados de Olenna Tyrell camino al rescate de la reina Margaery. </description>
       <Point>
-        <coordinates>2.56200,42.07300,375</coordinates>
+        <coordinates>2.825199,41.987628,85</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
     <Placemark>
-      <name>Amer</name>
-      <description>Población con un monasterio benedictino y una plaza mayor.</description>
+      <name>Mercado del Puerto de Braavos </name>
+      <description>En el séptimo capítulo de Games of Thrones, Arya Stark pasea por el mercado de Braavos buscando pasaje para poder abandonar la ciudad.
+                    Este mercado se ambientó en el Paseo Arqueológico de Gerona, y la calle del Rey Fernando el Católico, justo delante de la entrada que da acceso a los Baños Árabes.
+                </description>
       <Point>
-        <coordinates>2.60200,41.97000,185</coordinates>
+        <coordinates>2.825840,41.988043,84</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
     <Placemark>
-      <name>Girona - Parc de les Ribes del Ter</name>
-      <description>Final de etapa en Girona junto al río Ter.</description>
+      <name>Plaça dels Jurats</name>
+      <description>Es una plaza que es más moderna pero que, con la ayuda de un decorado, sirvió para representar una escena en la que Arya está viendo una obra de teatro, ya que tiene como encargo matar a una de las actrices.</description>
       <Point>
-        <coordinates>2.81500,41.98100,70</coordinates>
+        <coordinates>2.826283,41.988424,85</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
-    <name>Carrilet I: Olot - Girona</name>
+    <Placemark>
+      <name>Monasteri de Sant Pere de Galligants</name>
+      <description>En el último capítulo de Juego de Tronos, Sam llega a Antigua para convertirse en maestre. El interior del monasterio de Sant Pere de Galligats, donde se encuentra el Museu arqueològic de Catalunya, es la entrada a la Biblioteca de Antigua.</description>
+      <Point>
+        <coordinates>2.826306,41.988863,82</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <name>Localizaciones de Juego de Tronos en Girona</name>
     <Placemark>
       <LineString>
         <extrude>1</extrude>
         <tessellation>1</tessellation>
-        <coordinates>2.48900,42.17600,440
-2.48900,42.17600,440
-2.49500,42.17200,435
-2.50800,42.16300,480
-2.50200,42.14900,510
-2.52000,42.13500,560
-2.53500,42.12800,589
-2.56000,42.10500,430
-2.56200,42.07300,375
-2.58000,42.05500,320
-2.60500,42.01500,210
-2.60200,41.97000,185
-2.63500,41.95500,155
-2.68000,41.95200,130
-2.74500,41.96800,100
-2.79000,41.97500,82
-2.81500,41.98100,70</coordinates>
+        <coordinates>2.826941,41.987316,104
+2.826941,41.987316,104
+2.826879,41.987186,104
+2.826705,41.987126,105
+2.825816,41.987115,94
+2.825769,41.987363,93
+2.825195,41.987367,86
+2.825199,41.987628,85
+2.825205,41.987754,85
+2.825466,41.987760,85
+2.825742,41.987915,86
+2.825840,41.988043,84
+2.825876,41.988169,82
+2.826039,41.988259,81
+2.826050,41.988339,80
+2.826230,41.988313,80
+2.826283,41.988424,85
+2.826149,41.988500,79
+2.826235,41.988614,78
+2.826221,41.988746,77
+2.826306,41.988863,82</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </LineString>
       <Style>

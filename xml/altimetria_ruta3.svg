@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
-  <polyline points="80.00,177.61 80.00,177.61 95.46,180.89 127.67,151.41 185.64,131.75 224.29,99.00 250.06,80.00 308.04,184.16 411.10,220.19 449.75,256.22 527.06,328.29 617.24,344.66 668.77,364.32 720.31,380.69 797.61,400.35 855.58,412.14 920.00,420.00 920.00,420.00 80.00,420.00" stroke="red" fill="#ffcccc" stroke-width="2" />
+  <polyline points="80.00,92.14 80.00,92.14 97.38,92.14 115.35,80.00 198.64,213.57 230.21,225.71 445.56,310.71 481.83,322.86 497.72,322.86 522.19,322.86 554.59,310.71 647.53,335.00 663.77,359.29 682.79,371.43 692.92,383.57 710.10,383.57 799.64,322.86 815.43,395.71 831.91,407.86 848.59,420.00 920.00,359.29 920.00,420.00 80.00,420.00" stroke="red" fill="#ffcccc" stroke-width="2" />
   <line x1="80.0" y1="420.0" x2="920.0" y2="420.0" stroke="black" stroke-width="2" />
   <line x1="80.0" y1="420.0" x2="80.0" y2="80.0" stroke="black" stroke-width="2" />
   <text x="80.0" y="440.0" font-size="11">0 m</text>
-  <text x="900.0" y="440.0" font-size="11">65200 m</text>
-  <text x="25.0" y="425.0" font-size="11">70 m</text>
-  <text x="25.0" y="85.0" font-size="11">589 m</text>
+  <text x="900.0" y="440.0" font-size="11">741 m</text>
+  <text x="25.0" y="425.0" font-size="11">77 m</text>
+  <text x="25.0" y="85.0" font-size="11">105 m</text>
   <text x="500.0" y="460.0" font-size="16" style="text-anchor: middle;">Distancia (m)</text>
   <text x="40.0" y="250.0" font-size="16" style="writing-mode: tb; glyph-orientation-vertical: 0;">Altitud (m)</text>
 </svg>

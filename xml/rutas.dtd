@@ -18,12 +18,16 @@
 
 <!ELEMENT coordenadas (longitud, latitud, altitud)>
 <!ELEMENT longitud (#PCDATA)>
+<!ATTLIST longitud unidad CDATA #REQUIRED>
 <!ELEMENT latitud (#PCDATA)>
+<!ATTLIST latitud unidad CDATA #REQUIRED>
 <!ELEMENT altitud (#PCDATA)>
+<!ATTLIST altitud unidad CDATA #REQUIRED>
 
-<!ELEMENT referencias (referencia, referencia, referencia+)>
+<!ELEMENT referencias (referencia+)>
 <!ELEMENT referencia  (#PCDATA)>
-<!ATTLIST referencia url CDATA #IMPLIED>
+<!ATTLIST referencia fuente CDATA #REQUIRED>
+<!ATTLIST referencia url CDATA #REQUIRED>
 
 <!ELEMENT recomendacion (#PCDATA)>
 
@@ -31,18 +35,17 @@
 <!ELEMENT hito (nombre, descripcion, coordenadas, distancia, fotos, videos?)>
 <!ATTLIST hito id ID #REQUIRED>
 
-<!ELEMENT puntoRuta (coordenadas, distancia)>
-<!ATTLIST puntoRuta seq CDATA #REQUIRED>
+<!ELEMENT puntoRuta (coordenadas)>
 
 <!ELEMENT distancia (#PCDATA)>
-<!ATTLIST distancia unidad CDATA #REQUIRED>
+<!ATTLIST distancia unidad (m|km) #REQUIRED>
 
 <!ELEMENT fotos (foto+)>
 <!ELEMENT foto EMPTY>
 <!ATTLIST foto 
     url CDATA #REQUIRED
     descripcion CDATA #IMPLIED>
-<!ELEMENT videos (video*)>
+<!ELEMENT videos (video+)>
 <!ELEMENT video EMPTY>
 <!ATTLIST video 
     url CDATA #REQUIRED

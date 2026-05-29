@@ -5,7 +5,7 @@
       <name>Ruta Monumental del Casco Histórico de Girona - Inicio</name>
       <description>Punto de inicio de la ruta</description>
       <Point>
-        <coordinates>2.82388,41.98457,68</coordinates>
+        <coordinates>2.823893,41.984575,68</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
@@ -13,15 +13,15 @@
       <name>Pont de les Peixateries Velles (Pont Eiffel)</name>
       <description>Puente metálico rojo construido en 1876. Conecta el Mercadal con la Rambla de la Lliberta.</description>
       <Point>
-        <coordinates>2.82388,41.98457,68</coordinates>
+        <coordinates>2.823893,41.984575,72</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
     <Placemark>
       <name>El Call Jueu (Barrio Judío)</name>
-      <description>Una de las juderías medievales mejor conservadas de Europa.</description>
+      <description>El barrio judío de Gerona fue el centro de una de las comunidades judías más activas de España, y hoy es uno de los barrios judíos mejor conservados de la península ibérica.</description>
       <Point>
-        <coordinates>2.82520,41.98600,78</coordinates>
+        <coordinates>2.825210,41.986797,85</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
@@ -29,15 +29,17 @@
       <name>Catedral de Santa Maria de Girona</name>
       <description>Templo construido entre los siglos XI y XVIII con elementos románicos, góticos y barrocos.</description>
       <Point>
-        <coordinates>2.82631,41.98743,93</coordinates>
+        <coordinates>2.825771,41.987338,92</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
     <Placemark>
       <name>Banys Àrabs (Baños Árabes)</name>
-      <description>Edificio románico de 1194. Es el conjunto de baños románicos mejor conservado de Cataluña.</description>
+      <description>Fueron construidos en 1194 con una estructura que imitaba la de los baños musulmanes. 
+                    Los baños están divididos en cinco recintos: los vestuarios, la sala fría, la sala tibia, la sala caliente y la sala del horno y la caldera.
+                </description>
       <Point>
-        <coordinates>2.82750,41.98830,86</coordinates>
+        <coordinates>2.825873,41.988122,84</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
@@ -45,7 +47,7 @@
       <name>Basílica de Sant Feliu</name>
       <description>Iglesia levantada entre los siglos XII y XVII sobre una necrópolis romana.</description>
       <Point>
-        <coordinates>2.82480,41.98640,74</coordinates>
+        <coordinates> 2.824736,41.988261,76</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
@@ -54,20 +56,29 @@
       <LineString>
         <extrude>1</extrude>
         <tessellation>1</tessellation>
-        <coordinates>2.82388,41.98457,68
-2.82388,41.98457,68
-2.82430,41.98490,70
-2.82485,41.98530,72
-2.82520,41.98600,78
-2.82555,41.98650,82
-2.82590,41.98700,88
-2.82631,41.98743,93
-2.82680,41.98770,90
-2.82750,41.98830,86
-2.82700,41.98790,84
-2.82600,41.98720,80
-2.82530,41.98680,76
-2.82480,41.98640,74</coordinates>
+        <coordinates>2.823893,41.984575,68
+2.823893,41.984575,72
+2.824341,41.984453,73
+2.824774,41.985317,76
+2.825326,41.985421,81
+2.825167,41.986715,85
+2.825210,41.986797,85
+2.825221,41.987335,86
+2.825771,41.987338,92
+2.825221,41.987335,86
+2.825195,41.987735,84
+2.825464,41.987764,85
+2.825755,41.987917,86
+2.825873,41.988122,84
+2.825874,41.988166,84
+2.826011,41.988260,81
+ 2.826022,41.988302,80
+2.825998,41.988360,79
+2.825631,41.988456,78
+2.825317,41.988443,78
+2.825292,41.988320,79
+2.824938,41.988380,78
+ 2.824736,41.988261,76</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </LineString>
       <Style>

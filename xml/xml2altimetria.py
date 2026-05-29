@@ -40,6 +40,14 @@ class Svg(object):
         for hijo in self.raiz.findall('.//'):
             print("Elemento =", hijo.tag, "Atributos =", hijo.attrib)
 
+from math import radians, sin, cos, sqrt, atan2
+
+def haversine(lon1, lat1, lon2, lat2):
+    R = 6371000  # Radio de la Tierra en metros
+    dLat = radians(lat2 - lat1)
+    dLon = radians(lon2 - lon1)
+    a = sin(dLat/2)**2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(dLon/2)**2
+    return R * 2 * atan2(sqrt(a), sqrt(1 - a))
 
 def main():
     xml_file = "rutasEsquema.xml"
@@ -54,8 +62,6 @@ def main():
     rutas = raiz.findall('u:ruta', NS)
 
     for ruta in rutas:
-        nombre_ruta = ruta.findtext('u:nombre', namespaces=NS)
-
         distancias = []
         altitudes = []
         nombres_hitos = [] 
@@ -68,21 +74,36 @@ def main():
         distancia_acumulada = 0.0
         hitos = ruta.find('u:hitos', NS)
 
-        for hito in hitos:
-            tag = hito.tag.replace('{http://www.uniovi.es}', '')
+        prev_lon = float(ruta.findtext('u:inicio/u:coordenadas/u:longitud', namespaces=NS))
+        prev_lat = float(ruta.findtext('u:inicio/u:coordenadas/u:latitud', namespaces=NS))
 
-            alt_texto = hito.findtext('u:coordenadas/u:altitud', namespaces=NS)
+        for nodo in hitos:
+            tag = nodo.tag.replace('{http://www.uniovi.es}', '')
 
-            # La distancia puede ser en m o km -> mirar el atributo unidad
-            dist_el = hito.find('u:distancia', NS)
-            unidad = dist_el.get('unidad')
-            dist_valor = float(dist_el.text)
-            if unidad == 'km':
-                dist_valor = dist_valor * 1000  # Convertir a metros
+            alt_texto = nodo.findtext('u:coordenadas/u:altitud', namespaces=NS)
+            lon_actual = float(nodo.findtext('u:coordenadas/u:longitud', namespaces=NS))
+            lat_actual = float(nodo.findtext('u:coordenadas/u:latitud', namespaces=NS))
+
+            if tag == 'hito':
+                dist_el = nodo.find('u:distancia', NS)
+                unidad = dist_el.get('unidad')
+                dist_valor = float(dist_el.text)
+                if unidad == 'km':
+                    dist_valor = dist_valor * 1000
+            else:
+                # puntoRuta: calcular con Haversine
+                dist_valor = haversine(prev_lon, prev_lat, lon_actual, lat_actual)
 
             distancia_acumulada += dist_valor
             distancias.append(distancia_acumulada)
             altitudes.append(float(alt_texto))
+
+            #if tag == 'hito':
+                #nombre_hito = nodo.findtext('u:nombre', namespaces=NS)
+                #nombres_hitos.append((distancia_acumulada, nombre_hito))
+
+            prev_lon = lon_actual
+            prev_lat = lat_actual
 
         margin = 80
         width = 1000

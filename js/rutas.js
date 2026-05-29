@@ -91,6 +91,19 @@ class Rutas {
                     artHito.appendChild(img);
                 });
 
+                const videos = hito.querySelectorAll("video");
+                videos.forEach((video) => {
+                    const url = video.getAttribute("url");
+                    const desc = video.getAttribute("descripcion") || "";
+
+                    const elementVideo = document.createElement("video");
+                    elementVideo.src = url;
+                    elementVideo.controls = true;
+                    elementVideo.alt = desc;
+                    artHito.appendChild(elementVideo);
+                });
+
+
                 seccion.appendChild(artHito);
             });
 
@@ -174,29 +187,39 @@ class CargadorKML {
 
 
     procesarKML(textoKML) {
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(textoKML, "text/xml");
-        
-        const coordsXML = xml.getElementsByTagNameNS(
-            "http://www.opengis.net/kml/2.2",
-            "coordinates"
-            );            
-        
-        this.coordenadas = [];
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(textoKML, "text/xml");
+    const ns = "http://www.opengis.net/kml/2.2";
 
-        for (let nodo of coordsXML) {
-            const texto = nodo.textContent.trim();
-            const puntos = texto.split(/\s+/);
-
-            for (let p of puntos) {
-                const [lon, lat] = p.split(",").map(Number);
-
-                this.coordenadas.push({ lat: lat, lon: lon });
-            }
+    // Coordenadas de la LineString (para la polilínea)
+    this.coordenadas = [];
+    const lineStrings = xml.getElementsByTagNameNS(ns, "LineString");
+    for (let ls of lineStrings) {
+        const texto = ls.getElementsByTagNameNS(ns, "coordinates")[0].textContent.trim();
+        const puntos = texto.split(/\s+/);
+        for (let p of puntos) {
+            const [lon, lat] = p.split(",").map(Number);
+            this.coordenadas.push({ lat: lat, lon: lon });
+            console.log("Linea:", lat, lon);
         }
-
-        this.insertarKML();
     }
+
+    // Placemarks con Point (para los marcadores)
+    this.marcadores = [];
+    const placemarks = xml.getElementsByTagNameNS(ns, "Placemark");
+    for (let pm of placemarks) {
+        const point = pm.getElementsByTagNameNS(ns, "Point")[0];
+        if (point) {
+            const nombre = pm.getElementsByTagNameNS(ns, "name")[0]?.textContent || "";
+            const coords = point.getElementsByTagNameNS(ns, "coordinates")[0].textContent.trim();
+            const [lon, lat] = coords.split(",").map(Number);
+            this.marcadores.push({ lat: lat, lon: lon, nombre: nombre });
+            console.log("Marcador:", nombre, lat, lon);
+        }
+    }
+
+    this.insertarKML();
+}
 
     insertarKML() {
         if (!this.coordenadas || this.coordenadas.length === 0) {
@@ -204,14 +227,19 @@ class CargadorKML {
             return;
         }
 
-        const origen = this.coordenadas[0];
+        const bounds = new google.maps.LatLngBounds();
 
-        new google.maps.Marker({
-            position: { lat: origen.lat, lng: origen.lon },
-            map: this.mapa,
-            title: "Inicio de la ruta"
-        });
+        // Marcadores
+        for (let m of this.marcadores) {
+            new google.maps.Marker({
+                position: { lat: m.lat, lng: m.lon },
+                map: this.mapa,
+                title: m.nombre
+            });
+            bounds.extend({ lat: m.lat, lng: m.lon });
+        }
 
+        // Polilínea con las coordenadas de la LineString
         const ruta = this.coordenadas.map(p => ({ lat: p.lat, lng: p.lon }));
 
         const polilinea = new google.maps.Polyline({
@@ -224,13 +252,10 @@ class CargadorKML {
 
         polilinea.setMap(this.mapa);
 
-        const bounds = new google.maps.LatLngBounds();
-
         for (let punto of ruta) {
             bounds.extend(punto);
         }
 
         this.mapa.fitBounds(bounds);
     }
-
 }

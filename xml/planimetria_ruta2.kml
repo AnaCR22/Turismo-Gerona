@@ -2,75 +2,84 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <Placemark>
-      <name>Camí de Ronda - Inicio</name>
+      <name>Ruta por los museos más emblemáticos de Girona - Inicio</name>
       <description>Punto de inicio de la ruta</description>
       <Point>
-        <coordinates>3.18450,41.88900,3</coordinates>
+        <coordinates>2.823908,41.983225,74</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
     <Placemark>
-      <name>Calella de Palafrugell</name>
-      <description>Antiguo pueblo de pescadores con arcadas frente al mar y casas blancas.</description>
+      <name>Bòlit: centre d'art contemporani</name>
+      <description>El Bòlit, Centro de Arte Contemporáneo de Girona es un equipamiento cultural público inaugurado en 2008 con el objetivo de promover la creación, la investigación y la difusión del arte contemporáneo.
+                    Con varios espacios repartidos por la ciudad de Girona, Bòlit actúa como un laboratorio de creación y pensamiento contemporáneo, con proyección tanto local como internacional.
+                </description>
       <Point>
-        <coordinates>3.18450,41.88900,3</coordinates>
+        <coordinates>2.823908,41.983225,74</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
     <Placemark>
-      <name>Jardín Botánico de Cap Roig</name>
-      <description>Jardín de 17 hectáreas creado en 1927.</description>
+      <name>CaixaForum Girona</name>
+      <description>CaixaForum Girona ofrece una amplia programación de exposiciones y actividades culturales y educativas dirigidas a todos los públicos.
+                    Forma parte de una red de centros CaixaForum que se extiende por varios puntos de la geografía española.
+                </description>
       <Point>
-        <coordinates>3.19050,41.89300,45</coordinates>
+        <coordinates>2.825573,41.984384,81</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
     <Placemark>
-      <name>Faro de Sant Sebastià</name>
-      <description>Faro construido en 1857. Tiene un mirador con vistas desde el Cap de Creus hasta el Montgrí.</description>
+      <name>Museo de Historia de los Judíos</name>
+      <description>El principal objetivo del Museo de Historia de los Judíos es preservar y difundir la historia de las comunidades judías de Cataluña, que a lo largo de toda la Edad Media formaron parte y contribuyeron decisivamente a la trayectoria histórica y al desarrollo cultural y científico del país. </description>
       <Point>
-        <coordinates>3.20196,41.89678,170</coordinates>
+        <coordinates>2.825221,41.985985,82</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
     <Placemark>
-      <name>Playa de Llafranc</name>
-      <description>Playa de arena gruesa de 330 m en forma de media luna.</description>
+      <name>Museo de Historia de Girona</name>
+      <description>El museo ofrece un recorrido cronológico por la historia de la ciudad, pasando por la Gerona romana, la medieval, la moderna y la contemporánea. 
+                    Igualmente, acoge un espacio dedicado a la imaginería festiva de la ciudad e incluye una sala dedicada a la sardana y a la cobla.
+                </description>
       <Point>
-        <coordinates>3.19450,41.89350,2</coordinates>
+        <coordinates>2.825208,41.987034,86</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
     <Placemark>
-      <name>Platja de Tamariu</name>
-      <description>Cala de 180 m de arena dorada rodeada de pinos. Ambiente familiar y restaurantes de pescado en primera línea.</description>
+      <name>Museu d'Art de Girona</name>
+      <description>El museo de Arte de Gerona es un museo fundado en 1976 y situado en el antiguo palacio episcopal de Gerona, junto a la catedral.
+                    En el museo se puede contemplar por orden cronológico el arte gerundense a través de épocas: románico, gótico, renacimiento, barroco, realismo, modernismo y novecentismo.
+                </description>
       <Point>
-        <coordinates>3.20600,41.91870,2</coordinates>
+        <coordinates>2.826261,41.987035,101</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
-    <name>Camí de Ronda</name>
+    <name>Ruta por los museos más emblemáticos de Girona</name>
     <Placemark>
       <LineString>
         <extrude>1</extrude>
         <tessellation>1</tessellation>
-        <coordinates>3.18450,41.88900,3
-3.18450,41.88900,3
-3.18600,41.89050,15
-3.18850,41.89200,35
-3.19050,41.89300,45
-3.19300,41.89400,60
-3.19600,41.89500,95
-3.19900,41.89580,140
-3.20196,41.89678,170
-3.20050,41.89750,120
-3.19700,41.89500,50
-3.19450,41.89350,2
-3.19700,41.89600,20
-3.20200,41.90200,55
-3.20800,41.90900,40
-3.20700,41.91500,25
-3.20600,41.91870,2</coordinates>
+        <coordinates>2.823908,41.983225,74
+2.823908,41.983225,74
+2.823956,41.983540,73
+2.824334,41.983426,76
+2.824801,41.983282,79
+2.825573,41.984384,81
+2.825715,41.984821,82
+2.825326,41.985419,81
+2.825221,41.985985,82
+2.825206,41.986423,84
+2.825156,41.986712,85
+2.825195,41.986950,86
+2.825208,41.987034,86
+2.825203,41.987317,86
+2.825764,41.987328,93
+2.825814,41.987001,94
+2.826257,41.986994,100
+2.826261,41.987035,101</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </LineString>
       <Style>
