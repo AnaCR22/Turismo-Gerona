@@ -67,11 +67,6 @@ article video {
     height: 19.5rem;
 }
 
-/* Especificidad 0-0-0-1 */
-audio {
-    max-width: 100%;
-}
-
 /* Especificidad 0-0-0-2 */
 section svg {
     width: 100%;
@@ -116,5 +111,10 @@ caption{
     video {
         width: 100%;
         height: auto;
+    }
+
+    /* Especificidad 0-0-0-1 */
+    audio {
+        width: 100%;
     }
 }
