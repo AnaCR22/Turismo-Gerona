@@ -1,0 +1,16 @@
+﻿TABLA: tipos_recurso;;;;;;;
+id;nombre;;;;;;
+1;Museo;;;;;;
+2;Ruta;;;;;;
+3;Restaurante;;;;;;
+4;Hotel;;;;;;
+5;Espectáculo;;;;;;
+;;;;;;;
+;;;;;;;
+TABLA: recursos;;;;;;;
+id;nombre;descripcion;precio;plazas;fecha_inicio;fecha_fin;id_tipo
+1;Museo de Arte de Girona;Visita guiada al museo de arte de la ciudad.;12.00;30;01/07/2026 10:00;01/07/2026 13:00;1
+2;Ruta Juego de Tronos en Girona;Visita guiada por las localizaciones de rodaje de Juego de Tronos.;18.00;20;05/07/2026 9:00;05/07/2026 12:00;2
+3;Restaurante Can Roca;Menú degustación en restaurante tradicional gerundense.;45.00;20;10/07/2026 13:00;10/07/2026 16:00;3
+4;Hotel Llegendes de Girona;Noche en hotel boutique en el casco histórico con desayuno incluido.;95.00;10;15/07/2026 14:00;16/07/2026 12:00;4
+5;Festival Temps de Flors;Entrada al festival de flores de Girona con acceso a todos los espacios.;8.00;100;10/05/2026 9:00;18/05/2026 21:00;5
