@@ -56,7 +56,7 @@ def main():
     xml_path = "rutasEsquema.xml"
 
     # Namespace del XML
-    NS = {'u': 'http://www.uniovi.es'}
+    NS = {'ns': 'http://www.uniovi.es'}
 
     # Cargar XML
     try:
@@ -66,45 +66,38 @@ def main():
         return
     
 
-    rutas = raiz.findall('u:ruta', NS)
+    rutas = raiz.findall('ns:ruta', NS)
     
     # Iterar sobre cada ruta
     for ruta in rutas:
-        nombre_ruta = ruta.findtext('u:nombre', default='Ruta', namespaces=NS)
-        id_ruta = ruta.get('id')
+        nombre_ruta = ruta.findtext('ns:nombre', default='Ruta', namespaces=NS)
 
-        # Generar KML para cada ruta
+        #Generar KML para cada ruta
         nuevoKML = Kml()
         coords = []
 
-        # Punto de inicio de la ruta
-        inicio = ruta.find('u:inicio/u:coordenadas', NS)
-        lon = inicio.findtext('u:longitud', namespaces=NS)
-        lat = inicio.findtext('u:latitud', namespaces=NS)
-        alt = inicio.findtext('u:altitud', namespaces=NS)
+        #Punto de inicio de la ruta
+        lon = ruta.findtext('ns:inicio/ns:coordenadas/ns:longitud', namespaces=NS)
+        lat = ruta.findtext('ns:inicio/ns:coordenadas/ns:latitud', namespaces=NS)
+        alt = ruta.findtext('ns:inicio/ns:coordenadas/ns:altitud', namespaces=NS)
         coords.append((lon, lat, alt))
         nuevoKML.addPlacemark(nombre_ruta + " - Inicio", "Punto de inicio de la ruta", lon, lat, alt, 'relativeToGround')
         
-        # Recorrer los hitos de las rutas
-        hitos = ruta.find('u:hitos', NS)
+        #Recorrer los hitos de las rutas
+        hitos = ruta.find('ns:hitos', NS)
 
-        # Recorrer los hitos de las rutas
         for hito in hitos:
-            # Quitar el tag para comparar
-            tag = hito.tag.replace('{http://www.uniovi.es}', '')
-
-            coord = hito.find('u:coordenadas', NS)
-            lon = coord.findtext('u:longitud', namespaces=NS)
-            lat = coord.findtext('u:latitud', namespaces=NS)
-            alt = coord.findtext('u:altitud', namespaces=NS)
+            lon = hito.findtext('ns:coordenadas/ns:longitud', namespaces=NS)
+            lat = hito.findtext('ns:coordenadas/ns:latitud', namespaces=NS)
+            alt = hito.findtext('ns:coordenadas/ns:altitud', namespaces=NS)
             coords.append((lon, lat, alt))
 
-            if tag == 'hito':
-                nombre_hito = hito.findtext('u:nombre', namespaces=NS)
-                desc_hito = hito.findtext('u:descripcion', namespaces=NS)
+            nombre_hito = hito.findtext('ns:nombre', namespaces=NS)
+            if nombre_hito:
+                desc_hito = hito.findtext('ns:descripcion', namespaces=NS)
                 nuevoKML.addPlacemark(nombre_hito, desc_hito, lon, lat, alt, 'relativeToGround')
 
-        # Línea con todas las coordenadas
+        #Línea con todas las coordenadas para mostrar
         coordenadas_str = "\n".join(f"{lon},{lat},{alt}" for lon, lat, alt in coords)
 
         nuevoKML.addLineString(
@@ -115,7 +108,7 @@ def main():
         )
 
         nuevoKML.ver()
-        nombre_archivo = ruta.findtext('u:planimetria', namespaces=NS)
+        nombre_archivo = ruta.findtext('ns:planimetria', namespaces=NS)
         nuevoKML.escribir(nombre_archivo)
 
         print("Creado el archivo:", nombre_archivo)

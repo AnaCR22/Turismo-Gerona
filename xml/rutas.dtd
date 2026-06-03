@@ -31,21 +31,18 @@
 
 <!ELEMENT recomendacion (#PCDATA)>
 
-<!ELEMENT hitos ((hito | puntoRuta)+)>
-<!ELEMENT hito (nombre, descripcion, coordenadas, distancia, fotos, videos?)>
-<!ATTLIST hito id ID #REQUIRED>
-
-<!ELEMENT puntoRuta (coordenadas)>
+<!ELEMENT hitos (hito+)>
+<!ELEMENT hito (nombre?, descripcion?, coordenadas, distancia, fotos?, videos?)>
 
 <!ELEMENT distancia (#PCDATA)>
-<!ATTLIST distancia unidad (m|km) #REQUIRED>
+<!ATTLIST distancia unidad CDATA #REQUIRED>
 
 <!ELEMENT fotos (foto+)>
 <!ELEMENT foto EMPTY>
 <!ATTLIST foto 
     url CDATA #REQUIRED
     descripcion CDATA #IMPLIED>
-<!ELEMENT videos (video+)>
+<!ELEMENT videos (video*)>
 <!ELEMENT video EMPTY>
 <!ATTLIST video 
     url CDATA #REQUIRED

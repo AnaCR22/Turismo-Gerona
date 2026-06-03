@@ -5,7 +5,7 @@
       <name>Ruta Monumental del Casco Histórico de Girona - Inicio</name>
       <description>Punto de inicio de la ruta</description>
       <Point>
-        <coordinates>2.823893,41.984575,68</coordinates>
+        <coordinates>2.823893,41.984575,72</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
@@ -47,7 +47,7 @@
       <name>Basílica de Sant Feliu</name>
       <description>Iglesia levantada entre los siglos XII y XVII sobre una necrópolis romana.</description>
       <Point>
-        <coordinates> 2.824736,41.988261,76</coordinates>
+        <coordinates>2.824736,41.988261,76</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </Point>
     </Placemark>
@@ -56,7 +56,7 @@
       <LineString>
         <extrude>1</extrude>
         <tessellation>1</tessellation>
-        <coordinates>2.823893,41.984575,68
+        <coordinates>2.823893,41.984575,72
 2.823893,41.984575,72
 2.824341,41.984453,73
 2.824774,41.985317,76
@@ -72,13 +72,13 @@
 2.825873,41.988122,84
 2.825874,41.988166,84
 2.826011,41.988260,81
- 2.826022,41.988302,80
+2.826022,41.988302,80
 2.825998,41.988360,79
 2.825631,41.988456,78
 2.825317,41.988443,78
 2.825292,41.988320,79
 2.824938,41.988380,78
- 2.824736,41.988261,76</coordinates>
+2.824736,41.988261,76</coordinates>
         <altitudeMode>relativeToGround</altitudeMode>
       </LineString>
       <Style>

@@ -15,9 +15,9 @@ class Juego {
                 correcta: 4
             },
             {
-                texto: "¿Qué tipo de ruta es el Camí de Ronda?",
-                opciones: ["Gastronómica", "Ciclista", "Senderismo litoral", "Escalada", "Fluvial"],
-                correcta: 2
+                texto: "¿Qué escena de Juego de Tronos se rodó en las escaleras de la Catedral de Girona?",
+                opciones: ["La Boda Roja", "El camino de la vergüenza", "La batalla de los bastardos", "La muerte de Ned Stark", "La coronación de Cersei"],
+                correcta: 1
             },
             {
                 texto: "¿En qué siglo se construyó el Pont de les Peixateries Velles?",
@@ -25,9 +25,9 @@ class Juego {
                 correcta: 3
             },
             {
-                texto: "¿Cuál es el punto más alto de la ruta del Carrilet I?",
-                opciones: ["Olot", "Les Preses", "Amer", "Les Planes d'Hostoles", "Girona"],
-                correcta: 0
+                texto: "¿Qué museo de Girona se encuentra junto a la Catedral?",
+                opciones: ["CaixaForum", "Museo de Historia de los Judíos", "Bòlit", "Museu d'Art de Girona", "Museo de Historia de Girona"],
+                correcta: 3
             },
             {
                 texto: "¿Qué plato típico es un guiso de pescado con patatas?",
@@ -40,8 +40,8 @@ class Juego {
                 correcta: 2
             },
             {
-                texto: "¿Dónde finaliza la ruta del Carrilet I?",
-                opciones: ["Olot", "Amer", "Girona", "Les Preses", "Sant Feliu"],
+                texto: "¿Qué monasterio aparece como la Biblioteca de Antigua en Juego de Tronos?",
+                opciones: ["Monasterio de Poblet", "Monasterio de Montserrat", "Sant Pere de Galligants", "Sant Feliu", "Santa Maria de Ripoll"],
                 correcta: 2
             },
             {
@@ -65,6 +65,10 @@ class Juego {
 
         const seccion = document.createElement("section");
 
+        const h2 = document.createElement("h2");
+        h2.textContent = "Juego de preguntas sobre Gerona-Desktop";
+        seccion.appendChild(h2);
+
         const pIntro = document.createElement("p");
         pIntro.textContent = "Responde las 10 preguntas sobre Girona. Cada respuesta correcta vale 1 punto.";
         seccion.appendChild(pIntro);
@@ -72,17 +76,21 @@ class Juego {
         this.preguntas.forEach((pregunta, indice) => {
             const article = document.createElement("article");
 
+            // Mostrar índice + pregunta
             const h3 = document.createElement("h3");
             h3.textContent = (indice + 1) + ". " + pregunta.texto;
             article.appendChild(h3);
 
+            // Mostar opciones
             pregunta.opciones.forEach((opcion, opIndice) => {
+                //label -> para poder hacer click en el texto
                 const label = document.createElement("label");
 
+                //radio -> input de selección única
                 const radio = document.createElement("input");
                 radio.type = "radio";
-                radio.name = "pregunta" + indice;
-                radio.value = opIndice;
+                radio.name = "pregunta" + indice; // solo uno de la pregunta + índice puede ser seleccionado
+                radio.value = opIndice; //valor para identificar la opción
 
                 radio.addEventListener("change", () => {
                     this.respuestas[indice] = opIndice;
@@ -91,8 +99,6 @@ class Juego {
                 label.appendChild(radio);
                 label.appendChild(document.createTextNode(" " + opcion));
                 article.appendChild(label);
-
-                article.appendChild(document.createElement("br"));
             });
 
             seccion.appendChild(article);
@@ -107,7 +113,7 @@ class Juego {
     }
 
     corregir() {
-        // Comprobar que todas están respondidas
+        // Comprobar que todas están respondidas -> si contienen -1
         const sinResponder = this.respuestas.includes(-1);
         if (sinResponder) {
             alert("Debes responder todas las preguntas antes de finalizar.");
@@ -129,9 +135,9 @@ class Juego {
         const main = document.querySelector("main");
         const resultado = document.createElement("section");
 
-        const h3 = document.createElement("h3");
-        h3.textContent = "Resultado";
-        resultado.appendChild(h3);
+        const h2 = document.createElement("h2");
+        h2.textContent = "Resultado";
+        resultado.appendChild(h2);
 
         const p = document.createElement("p");
         p.textContent = "Tu puntuación: " + puntuacion + " de 10";

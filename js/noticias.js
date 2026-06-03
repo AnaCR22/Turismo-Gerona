@@ -9,7 +9,7 @@ class Noticias {
         this.noticias = [];
     }
 
-    async buscar() {
+    buscar() {
         const urlCompleta =
             `${this.url}?api_token=${this.apiKey}` +
             `&search=${encodeURIComponent(this.busqueda)}` +
@@ -36,6 +36,7 @@ class Noticias {
     mostrarNoticias() {
         const main = document.querySelector("main");
 
+        //Crear sección para las noticias
         const seccion = document.createElement("section");
 
         const h2 = document.createElement("h2");
@@ -45,14 +46,15 @@ class Noticias {
 
         // Crear un artículo por cada noticia
         this.noticias.forEach(noticia => {
+            const article = document.createElement("article");
 
             const h3 = document.createElement("h3");
             h3.textContent = noticia.title;
-            seccion.appendChild(h3);
+            article.appendChild(h3);
 
             const p = document.createElement("p");
             p.textContent = noticia.description || "Sin descripción";
-            seccion.appendChild(p);
+            article.appendChild(p);
 
             if (noticia.source && noticia.url) {
                 const fuente = document.createElement("p");
@@ -60,13 +62,14 @@ class Noticias {
 
                 const enlace = document.createElement("a");
                 enlace.href = noticia.url;
-                enlace.target = "_blank";
+                enlace.target = "_blank"; //abrir enlace en pestaña nueva
                 enlace.textContent = noticia.source;
 
                 fuente.appendChild(enlace);
-                seccion.appendChild(fuente);
+                article.appendChild(fuente);
             }
 
+            seccion.appendChild(article);
         });
 
         main.appendChild(seccion);

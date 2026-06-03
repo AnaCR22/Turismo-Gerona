@@ -1,12 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
-  <polyline points="80.00,420.00 80.00,363.33 102.86,349.17 162.29,306.67 189.58,235.83 273.33,179.17 383.47,179.17 418.16,165.00 568.88,80.00 595.23,165.00 621.04,193.33 634.06,179.17 651.14,165.00 749.69,193.33 752.53,193.33 761.46,235.83 764.22,250.00 768.13,264.17 786.77,278.33 801.84,278.33 809.85,264.17 827.25,278.33 920.00,306.67 920.00,420.00 80.00,420.00" stroke="red" fill="#ffcccc" stroke-width="2" />
+  <polyline points="80.00,420.00 80.00,420.00 122.55,403.00 234.91,352.00 286.18,267.00 444.36,199.00 455.27,199.00 520.73,182.00 569.82,80.00 618.91,182.00 668.00,216.00 692.00,199.00 723.64,182.00 750.91,216.00 756.36,216.00 772.73,267.00 778.18,284.00 785.82,301.00 820.73,318.00 849.09,318.00 864.36,301.00 897.09,318.00 920.00,352.00 920.00,420.00 80.00,420.00" stroke="red" fill="#ffcccc" stroke-width="2" />
   <line x1="80.0" y1="420.0" x2="920.0" y2="420.0" stroke="black" stroke-width="2" />
   <line x1="80.0" y1="420.0" x2="80.0" y2="80.0" stroke="black" stroke-width="2" />
-  <text x="80.0" y="440.0" font-size="11">0 m</text>
-  <text x="900.0" y="440.0" font-size="11">1449 m</text>
-  <text x="25.0" y="425.0" font-size="11">68 m</text>
-  <text x="25.0" y="85.0" font-size="11">92 m</text>
+  <text x="80.0" y="460.0" font-size="12">0 m</text>
+  <text x="900.0" y="460.0" font-size="12">770 m</text>
+  <text x="25.0" y="425.0" font-size="12">72 m</text>
+  <text x="25.0" y="85.0" font-size="12">92 m</text>
   <text x="500.0" y="460.0" font-size="16" style="text-anchor: middle;">Distancia (m)</text>
   <text x="40.0" y="250.0" font-size="16" style="writing-mode: tb; glyph-orientation-vertical: 0;">Altitud (m)</text>
+  <line x1="80.0" y1="420.0" x2="80.0" y2="430.0" stroke="gray" stroke-width="2" />
+  <text x="80.0" y="440.0" font-size="12" style="text-anchor: middle;">H1</text>
+  <line x1="455.27272727272725" y1="420.0" x2="455.27272727272725" y2="430.0" stroke="gray" stroke-width="2" />
+  <text x="455.27272727272725" y="440.0" font-size="12" style="text-anchor: middle;">H2</text>
+  <line x1="569.8181818181819" y1="420.0" x2="569.8181818181819" y2="430.0" stroke="gray" stroke-width="2" />
+  <text x="569.8181818181819" y="440.0" font-size="12" style="text-anchor: middle;">H3</text>
+  <line x1="750.9090909090909" y1="420.0" x2="750.9090909090909" y2="430.0" stroke="gray" stroke-width="2" />
+  <text x="750.9090909090909" y="440.0" font-size="12" style="text-anchor: middle;">H4</text>
+  <line x1="920.0" y1="420.0" x2="920.0" y2="430.0" stroke="gray" stroke-width="2" />
+  <text x="920.0" y="440.0" font-size="12" style="text-anchor: middle;">H5</text>
 </svg>

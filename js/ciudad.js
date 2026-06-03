@@ -1,29 +1,19 @@
 "use strict";
 
 class Ciudad {
-    constructor(nombre, gentilicio) {
+    constructor(nombre) {
         this.nombre = nombre;
-        this.gentilicio = gentilicio;
-        this.poblacion = 0;
         this.lat = 0;
         this.lon = 0;
     }
 
-    rellenarDatos(poblacion, lat, lon) {
-        this.poblacion = poblacion;
+    rellenarDatos(lat, lon) {
         this.lat = lat;
         this.lon = lon;
     }
 
     getNombre() {
         return "Nombre de la capital: " + this.nombre;
-    }
-
-    getInfoSecundaria() {
-        return "<ul>" +
-                "<li>Gentilicio: " + this.gentilicio + "</li>" +
-                "<li>Población: " + this.poblacion + "</li>" +
-                "</ul>";
     }
 
     escribirCoordenadas() {
@@ -44,7 +34,7 @@ class Ciudad {
             dataType: "json",
             method: "GET",
             success: (json) => this.procesarDatos(json),
-            error: () => console.error("Error al obtener los datos meteorológicos")
+            error: () => console.error("Error al obtener los datos meteorológicos de la ciudad")
         });
     }
 
@@ -66,12 +56,25 @@ class Ciudad {
         const $seccion = $("<section>").appendTo($main);
         $("<h3>").text("Tiempo actual en " + this.nombre).appendTo($seccion);
 
-        const $tiempoActual = $("<ul>").appendTo($seccion);;
+        const $tiempoActual = $("<ul>").appendTo($seccion);
+        $("<li>").text("Condición meteorológica: " + this.getDescripcionTiempo(this.actual.weather_code)).appendTo($tiempoActual);
         $("<li>").text("Temperatura: " + this.actual.temperature_2m + "°C").appendTo($tiempoActual);
         $("<li>").text("Sensación térmica: " + this.actual.apparent_temperature + "°C").appendTo($tiempoActual);
         $("<li>").text("Humedad: " + this.actual.relative_humidity_2m + "%").appendTo($tiempoActual);
         $("<li>").text("Viento: " + this.actual.wind_speed_10m + "km/h").appendTo($tiempoActual);
+    }
 
+    // código a texto -> no están todas las opciones
+    getDescripcionTiempo(code) {
+        if (code === 0) return "Despejado";
+        if (code <= 3) return "Nublado";
+        if (code <= 48) return "Niebla";
+        if (code <= 55) return "Llovizna";
+        if (code <= 65) return "Lluvia";
+        if (code <= 75) return "Nieve";
+        if (code <= 82) return "Chubascos";
+        if (code <= 99) return "Tormenta";
+        return "Desconocido";
     }
 
     mostrarPrevision() {
@@ -85,14 +88,16 @@ class Ciudad {
 
         $("<h3>").text("Previsión para los próximos 7 días").appendTo($seccion);
 
-        const $listaDias = $("<ul>").appendTo($seccion);;
+        const $listaDias = $("<ul>").appendTo($seccion);
 
         for (let i = 0; i < this.prevision.time.length; i++) {
-            const $dia = $("<li>").appendTo($listaDias);
-            $("<strong>").text(this.prevision.time[i]).appendTo($dia);
+            const $liDia = $("<li>").appendTo($listaDias);
+            $("<strong>").text(this.prevision.time[i]).appendTo($liDia);
 
-            const $previsionDia = $("<ul>").appendTo($dia);
+            //sublista para cada día
+            const $previsionDia = $("<ul>").appendTo($liDia);
 
+            $("<li>").text("Condición meteorológica: " + this.getDescripcionTiempo(this.prevision.weather_code[i])).appendTo($previsionDia);
             $("<li>").text("Máxima: " + this.prevision.temperature_2m_max[i] + "°C").appendTo($previsionDia);
             $("<li>").text("Mínima: " + this.prevision.temperature_2m_min[i] + "°C").appendTo($previsionDia);
             $("<li>").text("Probabilidad de precipitación: " + this.prevision.precipitation_probability_max[i] + "%").appendTo($previsionDia);

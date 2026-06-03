@@ -24,7 +24,7 @@
             <coordenadas>
                 <longitud unidad = "grados">2.823893</longitud>
                 <latitud unidad = "grados">41.984575</latitud>
-                <altitud unidad = "m">68</altitud>
+                <altitud unidad = "metros">72</altitud>
             </coordenadas>
         </inicio>
 
@@ -38,124 +38,133 @@
 
         <hitos>
             <!-- HITO 1 -->
-            <hito id="H01">
+            <hito>
                 <nombre>Pont de les Peixateries Velles (Pont Eiffel)</nombre>
                 <descripcion>Puente metálico rojo construido en 1876. Conecta el Mercadal con la Rambla de la Lliberta.</descripcion>
                 <coordenadas>
                     <longitud unidad = "grados">2.823893</longitud>
                     <latitud unidad = "grados">41.984575</latitud>
-                    <altitud unidad="m">72</altitud>
+                    <altitud unidad="metros">72</altitud>
                 </coordenadas>
-                <distancia unidad="m">0</distancia>
+                <distancia unidad="metros">0</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta1/PontEiffel.jpg" descripcion="Vista general del puente rojo sobre el río Onyar"/>
                 </fotos>
             </hito>
             
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.824341</longitud>
                     <latitud unidad = "grados">41.984453</latitud>
-                    <altitud unidad="m">73</altitud>
+                    <altitud unidad="metros">73</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">39</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.824774</longitud>
                     <latitud unidad = "grados">41.985317</latitud>
-                    <altitud unidad="m">76</altitud>
+                    <altitud unidad="metros">76</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">103</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825326</longitud>
                     <latitud unidad = "grados">41.985421</latitud>
-                    <altitud unidad="m">81</altitud>
+                    <altitud unidad="metros">81</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">47</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825167</longitud>
                     <latitud unidad = "grados">41.986715</latitud>
-                    <altitud unidad="m">85</altitud>
+                    <altitud unidad="metros">85</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">145</distancia>
+            </hito>
 
             <!-- HITO 2 -->
-            <hito id="H02">
+            <hito>
                 <nombre>El Call Jueu (Barrio Judío)</nombre>
                 <descripcion>El barrio judío de Gerona fue el centro de una de las comunidades judías más activas de España, y hoy es uno de los barrios judíos mejor conservados de la península ibérica.</descripcion>
                 <coordenadas>
                     <longitud unidad = "grados">2.825210</longitud>
                     <latitud unidad = "grados">41.986797</latitud>
-                    <altitud unidad="m">85</altitud>
+                    <altitud unidad="metros">85</altitud>
                 </coordenadas>
-                <distancia unidad="m">190</distancia>
+                <distancia unidad="metros">10</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta1/CallJueu.jpg" descripcion="Callejuela típica del barrio judío."/>
                 </fotos>
             </hito>
         
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825221</longitud>
                     <latitud unidad = "grados">41.987335</latitud>
-                    <altitud unidad="m">86</altitud>
+                    <altitud unidad="metros">86</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">60</distancia>
+            </hito>
 
             <!-- HITO 3 -->
-            <hito id="H03">
+            <hito>
                 <nombre>Catedral de Santa Maria de Girona</nombre>
                 <descripcion>Templo construido entre los siglos XI y XVIII con elementos románicos, góticos y barrocos.</descripcion>
                 <coordenadas>
                     <longitud unidad = "grados">2.825771</longitud>
                     <latitud unidad = "grados">41.987338</latitud>
-                    <altitud unidad="m">92</altitud>
+                    <altitud unidad="metros">92</altitud>
                 </coordenadas>
-                <distancia unidad="m">260</distancia>
+                <distancia unidad="metros">45</distancia>
                 <fotos>
                     <foto url="./multimedia/gerona-catedral.jpg" descripcion="Fachada barroca de la Catedral de Girona"/>
                 </fotos>
             </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825221</longitud>
                     <latitud unidad = "grados">41.987335</latitud>
-                    <altitud unidad="m">86</altitud>
+                    <altitud unidad="metros">86</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">45</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825195</longitud>
                     <latitud unidad = "grados">41.987735</latitud>
-                    <altitud unidad="m">84</altitud>
+                    <altitud unidad="metros">84</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">45</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825464</longitud>
                     <latitud unidad = "grados">41.987764</latitud>
-                    <altitud unidad="m">85</altitud>
+                    <altitud unidad="metros">85</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">22</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825755</longitud>
                     <latitud unidad = "grados">41.987917</latitud>
-                    <altitud unidad="m">86</altitud>
+                    <altitud unidad="metros">86</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">29</distancia>
+            </hito>
 
             <!-- HITO 4 -->
-            <hito id="H04">
+            <hito>
                 <nombre>Banys Àrabs (Baños Árabes)</nombre>
                 <descripcion>Fueron construidos en 1194 con una estructura que imitaba la de los baños musulmanes. 
                     Los baños están divididos en cinco recintos: los vestuarios, la sala fría, la sala tibia, la sala caliente y la sala del horno y la caldera.
@@ -163,88 +172,96 @@
                 <coordenadas>
                     <longitud unidad = "grados">2.825873</longitud>
                     <latitud unidad = "grados">41.988122</latitud>
-                    <altitud unidad="m">84</altitud>
+                    <altitud unidad="metros">84</altitud>
                 </coordenadas>
-                <distancia unidad="m">170</distancia>
+                <distancia unidad="metros">25</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta1/BanysArabs.jpg" descripcion="Interior de los baños árabes de Girona"/>
                 </fotos>
             </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825874</longitud>
                     <latitud unidad = "grados">41.988166</latitud>
-                    <altitud unidad="m">84</altitud>
+                    <altitud unidad="metros">84</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">5</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.826011</longitud>
                     <latitud unidad = "grados">41.988260</latitud>
-                    <altitud unidad="m">81</altitud>
+                    <altitud unidad="metros">81</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">15</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
-                    <longitud unidad = "grados"> 2.826022</longitud>
+                    <longitud unidad = "grados">2.826022</longitud>
                     <latitud unidad = "grados">41.988302</latitud>
-                    <altitud unidad="m">80</altitud>
+                    <altitud unidad="metros">80</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">5</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825998</longitud>
                     <latitud unidad = "grados">41.988360</latitud>
-                    <altitud unidad="m">79</altitud>
+                    <altitud unidad="metros">79</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">7</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825631</longitud>
                     <latitud unidad = "grados">41.988456</latitud>
-                    <altitud unidad="m">78</altitud>
+                    <altitud unidad="metros">78</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">32</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825317</longitud>
                     <latitud unidad = "grados">41.988443</latitud>
-                    <altitud unidad="m">78</altitud>
+                    <altitud unidad="metros">78</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">26</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825292</longitud>
                     <latitud unidad = "grados">41.988320</latitud>
-                    <altitud unidad="m">79</altitud>
+                    <altitud unidad="metros">79</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">14</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.824938</longitud>
                     <latitud unidad = "grados">41.988380</latitud>
-                    <altitud unidad="m">78</altitud>
+                    <altitud unidad="metros">78</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">30</distancia>
+            </hito>
 
             <!-- HITO 5 -->
-            <hito id="H05">
+            <hito>
                 <nombre>Basílica de Sant Feliu</nombre>
                     <descripcion>Iglesia levantada entre los siglos XII y XVII sobre una necrópolis romana.</descripcion>
                 <coordenadas>
-                    <longitud unidad = "grados"> 2.824736</longitud>
+                    <longitud unidad = "grados">2.824736</longitud>
                     <latitud unidad = "grados">41.988261</latitud>
-                    <altitud unidad="m">76</altitud>
+                    <altitud unidad="metros">76</altitud>
                 </coordenadas>
-                <distancia unidad="m">160</distancia>
+                <distancia unidad="metros">21</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta1/basilica1.jpg" descripcion="Fachada de la Basílica de Sant Feliu"/>
                 </fotos>
@@ -278,7 +295,7 @@
             <coordenadas>
                 <longitud unidad = "grados">2.823908</longitud>
                 <latitud unidad = "grados">41.983225</latitud>
-                <altitud unidad="m">74</altitud>
+                <altitud unidad="metros">74</altitud>
             </coordenadas>
         </inicio>
 
@@ -292,7 +309,7 @@
 
         <hitos>
             <!-- HITO 1 -->
-            <hito id="H06">
+            <hito>
                 <nombre>Bòlit: centre d'art contemporani</nombre>
                 <descripcion>El Bòlit, Centro de Arte Contemporáneo de Girona es un equipamiento cultural público inaugurado en 2008 con el objetivo de promover la creación, la investigación y la difusión del arte contemporáneo.
                     Con varios espacios repartidos por la ciudad de Girona, Bòlit actúa como un laboratorio de creación y pensamiento contemporáneo, con proyección tanto local como internacional.
@@ -300,40 +317,43 @@
                 <coordenadas>
                     <longitud unidad = "grados">2.823908</longitud>
                     <latitud unidad = "grados">41.983225</latitud>
-                    <altitud unidad="m">74</altitud>
+                    <altitud unidad="metros">74</altitud>
                 </coordenadas>
-                <distancia unidad="m">0</distancia>
+                <distancia unidad="metros">0</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta2/bolit.jpg" descripcion="Fachada exterior del Centro de Arte Contemporáneo de Girona"/>
                 </fotos>
             </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.823956</longitud>
                     <latitud unidad = "grados">41.983540</latitud>
-                    <altitud unidad="m">73</altitud>
+                    <altitud unidad="metros">73</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">35</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.824334</longitud>
                     <latitud unidad = "grados">41.983426</latitud>
-                    <altitud unidad="m">76</altitud>
+                    <altitud unidad="metros">76</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">34</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.824801</longitud>
                     <latitud unidad = "grados">41.983282</latitud>
-                    <altitud unidad="m">79</altitud>
+                    <altitud unidad="metros">79</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">42</distancia>
+            </hito>
 
             <!-- HITO 2 -->
-            <hito id="H07">
+            <hito>
                 <nombre>CaixaForum Girona</nombre>
                 <descripcion>CaixaForum Girona ofrece una amplia programación de exposiciones y actividades culturales y educativas dirigidas a todos los públicos.
                     Forma parte de una red de centros CaixaForum que se extiende por varios puntos de la geografía española.
@@ -341,72 +361,77 @@
                 <coordenadas>
                     <longitud unidad = "grados">2.825573</longitud>
                     <latitud unidad = "grados">41.984384</latitud>
-                    <altitud unidad="m">81</altitud>
+                    <altitud unidad="metros">81</altitud>
                 </coordenadas>
-                <distancia unidad="m">260</distancia>
+                <distancia unidad="metros">138</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta2/caixaforum.jpg" descripcion="Fachada exterior del CaixaForum de Girona"/>
                 </fotos>
             </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825715</longitud>
                     <latitud unidad = "grados">41.984821</latitud>
-                    <altitud unidad="m">82</altitud>
+                    <altitud unidad="metros">82</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">50</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825326</longitud>
                     <latitud unidad = "grados">41.985419</latitud>
-                    <altitud unidad="m">81</altitud>
+                    <altitud unidad="metros">81</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">74</distancia>
+            </hito>
 
 
             <!-- HITO 3 -->
-            <hito id="H08">
+            <hito>
                 <nombre>Museo de Historia de los Judíos</nombre>
                 <descripcion>El principal objetivo del Museo de Historia de los Judíos es preservar y difundir la historia de las comunidades judías de Cataluña, que a lo largo de toda la Edad Media formaron parte y contribuyeron decisivamente a la trayectoria histórica y al desarrollo cultural y científico del país. </descripcion>
                 <coordenadas>
                     <longitud unidad = "grados">2.825221</longitud>
                     <latitud unidad = "grados">41.985985</latitud>
-                    <altitud unidad="m">82</altitud>
+                    <altitud unidad="metros">82</altitud>
                 </coordenadas>
-                <distancia unidad="m">180</distancia>
+                <distancia unidad="metros">64</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta2/historiajudios.jpg" descripcion="Patio del Museo de Historia de los Judíos de Girona"/>
                 </fotos>
             </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825206</longitud>
                     <latitud unidad = "grados">41.986423</latitud>
-                    <altitud unidad="m">84</altitud>
+                    <altitud unidad="metros">84</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">49</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825156</longitud>
                     <latitud unidad = "grados">41.986712</latitud>
-                    <altitud unidad="m">85</altitud>
+                    <altitud unidad="metros">85</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">32</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825195</longitud>
                     <latitud unidad = "grados">41.986950</latitud>
-                    <altitud unidad="m">86</altitud>
+                    <altitud unidad="metros">86</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">27</distancia>
+            </hito>
 
             <!-- HITO 4 -->
-            <hito id="H09">
+            <hito>
                 <nombre>Museo de Historia de Girona</nombre>
                 <descripcion>El museo ofrece un recorrido cronológico por la historia de la ciudad, pasando por la Gerona romana, la medieval, la moderna y la contemporánea. 
                     Igualmente, acoge un espacio dedicado a la imaginería festiva de la ciudad e incluye una sala dedicada a la sardana y a la cobla.
@@ -414,48 +439,52 @@
                 <coordenadas>
                     <longitud unidad = "grados">2.825208</longitud>
                     <latitud unidad = "grados">41.987034</latitud>
-                    <altitud unidad="m">86</altitud>
+                    <altitud unidad="metros">86</altitud>
                 </coordenadas>
-                <distancia unidad="m">120</distancia>
+                <distancia unidad="metros">9</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta2/historia.jpg" descripcion="Sala interior del Museo de Historia de Girona."/>
                 </fotos>
             </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825203</longitud>
                     <latitud unidad = "grados">41.987317</latitud>
-                    <altitud unidad="m">86</altitud>
+                    <altitud unidad="metros">86</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">31</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825764</longitud>
                     <latitud unidad = "grados">41.987328</latitud>
-                    <altitud unidad="m">93</altitud>
+                    <altitud unidad="metros">93</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">46</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825814</longitud>
                     <latitud unidad = "grados">41.987001</latitud>
-                    <altitud unidad="m">94</altitud>
+                    <altitud unidad="metros">94</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">37</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.826257</longitud>
                     <latitud unidad = "grados">41.986994</latitud>
-                    <altitud unidad="m">100</altitud>
+                    <altitud unidad="metros">100</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">37</distancia>
+            </hito>
 
             <!-- HITO 5 -->
-            <hito id="H10">
+            <hito>
                 <nombre>Museu d'Art de Girona</nombre>
                 <descripcion>El museo de Arte de Gerona es un museo fundado en 1976 y situado en el antiguo palacio episcopal de Gerona, junto a la catedral.
                     En el museo se puede contemplar por orden cronológico el arte gerundense a través de épocas: románico, gótico, renacimiento, barroco, realismo, modernismo y novecentismo.
@@ -463,9 +492,9 @@
                 <coordenadas>
                     <longitud unidad = "grados">2.826261</longitud>
                     <latitud unidad = "grados">41.987035</latitud>
-                    <altitud unidad="m">101</altitud>
+                    <altitud unidad="metros">101</altitud>
                 </coordenadas>
-                <distancia unidad="m">170</distancia>
+                <distancia unidad="metros">5</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta2/arte.jpg" descripcion="Sala interior del Museo de Arte de Girona."/>
                 </fotos>
@@ -496,7 +525,7 @@
             <coordenadas> 
                 <longitud unidad = "grados">2.826941</longitud>
                 <latitud unidad = "grados">41.987316</latitud>
-                <altitud unidad="m">104</altitud>
+                <altitud unidad="metros">104</altitud>
             </coordenadas>
         </inicio>
 
@@ -510,15 +539,15 @@
 
         <hitos>
             <!-- HITO 1 -->
-            <hito id="H11">
+            <hito>
                 <nombre>Carrer del Bisbe Josep Cartañà</nombre>
                 <descripcion>En esta calle, muy cerca de la catedral, encontramos unas escaleras que son la localización en la que Arya Stark, tras quedarse ciega, mendiga pidiendo dinero.</descripcion>
                 <coordenadas>
                     <longitud unidad = "grados">2.826941</longitud>
                     <latitud unidad = "grados">41.987316</latitud>
-                    <altitud unidad="m">104</altitud>
+                    <altitud unidad="metros">104</altitud>
                 </coordenadas>
-                <distancia unidad="m">0</distancia>
+                <distancia unidad="metros">0</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta3/calleBisbe.jpg" descripcion="Calle del Bisbe Josep Cartaña"/>
                 </fotos>
@@ -527,48 +556,52 @@
                 </videos>
             </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.826879</longitud>
                     <latitud unidad = "grados">41.987186</latitud>
-                    <altitud unidad="m">104</altitud>
+                    <altitud unidad="metros">104</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">15</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.826705</longitud>
                     <latitud unidad = "grados">41.987126</latitud>
-                    <altitud unidad="m">105</altitud>
+                    <altitud unidad="metros">105</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">16</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825816</longitud>
                     <latitud unidad = "grados">41.987115</latitud>
-                    <altitud unidad="m">94</altitud>
+                    <altitud unidad="metros">94</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">73</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825769</longitud>
                     <latitud unidad = "grados">41.987363</latitud>
-                    <altitud unidad="m">93</altitud>
+                    <altitud unidad="metros">93</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">28</distancia>
+            </hito>
 
             <!-- HITO 2 -->
-            <hito id="H12">
+            <hito>
                 <nombre>Escaleras de la catedral</nombre>
                 <descripcion>Las escaleras de la catedral se convirtieron en el Gran Septo de Baelor, donde se rodó la escena en la que la reina Margaery realiza el camino de la vergüenza como lo realizó Cersei.</descripcion>
                 <coordenadas>
                     <longitud unidad = "grados">2.825195</longitud>
                     <latitud unidad = "grados">41.987367</latitud>
-                    <altitud unidad="m">86</altitud>
+                    <altitud unidad="metros">86</altitud>
                 </coordenadas>
-                <distancia unidad="m">190</distancia>
+                <distancia unidad="metros">47</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta3/escaleras.jpg" descripcion="Escaleras donde se realizó el Gran Septo de Baelor en Desembarco del Rey"/>
                 </fotos>
@@ -576,46 +609,49 @@
 
 
             <!-- HITO 3 -->
-            <hito id="H13">
+            <hito>
                 <nombre>Portal de Sobreportes</nombre>
                 <descripcion>En la escena donde aparece el Portal de Sobreportes, se ve a Jaime Lannister comandando a los soldados de Olenna Tyrell camino al rescate de la reina Margaery. </descripcion>
                 <coordenadas>
                     <longitud unidad = "grados">2.825199</longitud>
                     <latitud unidad = "grados">41.987628</latitud>
-                    <altitud unidad="m">85</altitud>
+                    <altitud unidad="metros">85</altitud>
                 </coordenadas>
-                <distancia unidad="m">32</distancia>
+                <distancia unidad="metros">29</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta3/portal.jpg" descripcion="Entrada de Jaime Lannister en Desembarco del Rey"/>
                 </fotos>
             </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825205</longitud>
                     <latitud unidad = "grados">41.987754</latitud>
-                    <altitud unidad="m">85</altitud>
+                    <altitud unidad="metros">85</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">14</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825466</longitud>
                     <latitud unidad = "grados">41.987760</latitud>
-                    <altitud unidad="m">85</altitud>
+                    <altitud unidad="metros">85</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">22</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825742</longitud>
                     <latitud unidad = "grados">41.987915</latitud>
-                    <altitud unidad="m">86</altitud>
+                    <altitud unidad="metros">86</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">29</distancia>
+            </hito>
 
             <!-- HITO 4 -->
-            <hito id="H14">
+            <hito>
                 <nombre>Mercado del Puerto de Braavos </nombre>
                 <descripcion>En el séptimo capítulo de Games of Thrones, Arya Stark pasea por el mercado de Braavos buscando pasaje para poder abandonar la ciudad.
                     Este mercado se ambientó en el Paseo Arqueológico de Gerona, y la calle del Rey Fernando el Católico, justo delante de la entrada que da acceso a los Baños Árabes.
@@ -623,95 +659,102 @@
                 <coordenadas>
                     <longitud unidad = "grados">2.825840</longitud>
                     <latitud unidad = "grados">41.988043</latitud>
-                    <altitud unidad="m">84</altitud>
+                    <altitud unidad="metros">84</altitud>
                 </coordenadas>
-                <distancia unidad="m">82</distancia>
+                <distancia unidad="metros">16</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta3/mercado.jpg" descripcion="Arya Stark pasea por el mercado de Braavos buscando pasaje para poder abandonar la ciudad"/>
                 </fotos>
             </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.825876</longitud>
                     <latitud unidad = "grados">41.988169</latitud>
-                    <altitud unidad="m">82</altitud>
+                    <altitud unidad="metros">82</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">14</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.826039</longitud>
                     <latitud unidad = "grados">41.988259</latitud>
-                    <altitud unidad="m">81</altitud>
+                    <altitud unidad="metros">81</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">17</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.826050</longitud>
                     <latitud unidad = "grados">41.988339</latitud>
-                    <altitud unidad="m">80</altitud>
+                    <altitud unidad="metros">80</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">9</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.826230</longitud>
                     <latitud unidad = "grados">41.988313</latitud>
-                    <altitud unidad="m">80</altitud>
+                    <altitud unidad="metros">80</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">15</distancia>
+            </hito>
 
             <!-- HITO 5-->
-            <hito id="H15">
+            <hito>
                 <nombre>Plaça dels Jurats</nombre>
                 <descripcion>Es una plaza que es más moderna pero que, con la ayuda de un decorado, sirvió para representar una escena en la que Arya está viendo una obra de teatro, ya que tiene como encargo matar a una de las actrices.</descripcion>
                 <coordenadas>
                     <longitud unidad = "grados">2.826283</longitud>
                     <latitud unidad = "grados">41.988424</latitud>
-                    <altitud unidad="m">85</altitud>
+                    <altitud unidad="metros">85</altitud>
                 </coordenadas>
-                <distancia unidad="m">79</distancia>
+                <distancia unidad="metros">13</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta3/teatro.jpg" descripcion="Obra de teatro en Braavos"/>
                 </fotos>
             </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.826149</longitud>
                     <latitud unidad = "grados">41.988500</latitud>
-                    <altitud unidad="m">79</altitud>
+                    <altitud unidad="metros">79</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">14</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.826235</longitud>
                     <latitud unidad = "grados">41.988614</latitud>
-                    <altitud unidad="m">78</altitud>
+                    <altitud unidad="metros">78</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">15</distancia>
+            </hito>
 
-            <puntoRuta>
+            <hito>
                 <coordenadas>
                     <longitud unidad = "grados">2.826221</longitud>
                     <latitud unidad = "grados">41.988746</latitud>
-                    <altitud unidad="m">77</altitud>
+                    <altitud unidad="metros">77</altitud>
                 </coordenadas>
-            </puntoRuta>
+                <distancia unidad="metros">15</distancia>
+            </hito>
 
              <!-- HITO 6-->
-            <hito id="H16">
+            <hito>
                 <nombre>Monasteri de Sant Pere de Galligants</nombre>
                 <descripcion>En el último capítulo de Juego de Tronos, Sam llega a Antigua para convertirse en maestre. El interior del monasterio de Sant Pere de Galligats, donde se encuentra el Museu arqueològic de Catalunya, es la entrada a la Biblioteca de Antigua.</descripcion>
                 <coordenadas>
                     <longitud unidad = "grados">2.826306</longitud>
                     <latitud unidad = "grados">41.988863</latitud>
-                    <altitud unidad="m">82</altitud>
+                    <altitud unidad="metros">82</altitud>
                 </coordenadas>
-                <distancia unidad="m">63</distancia>
+                <distancia unidad="metros">15</distancia>
                 <fotos>
                     <foto url="./multimedia/ruta3/biblioteca.jpg" descripcion="Entrada de la Biblioteca de Antigua"/>
                 </fotos>

@@ -1,8 +1,8 @@
 /*Datos personales: Ana Calleja Ramon UO300568*/
 /*Estilos para el layout del proyecto Gerona-Desktop*/
 
-
-/*Selector de tipo (especificidad 0-0-0-1)*/
+/*  HEADER Y NAVEGACIÓN  */
+/* Especificidad 0-0-0-1 */
 header {
     display: flex; 
     justify-content: space-between; 
@@ -11,104 +11,105 @@ header {
     flex-wrap: wrap; 
 }
 
-/*Selector descendente de tipo (especificidad 0-0-0-2)*/
+/* Especificidad 0-0-0-2*/
 nav {
     display: flex;
     gap: 0.3rem; 
     flex-wrap: wrap; 
 }
 
-/*Selector de tipo (especificidad 0-0-0-1)*/
+/* Especificidad 0-0-0-1*/
 nav a {
-    text-decoration: none;
     padding: 0px 5px;
 }
 
-
-/* El titular de cada noticia (especificidad 0-0-0-4) */
-main > section > article > h3 {
+/* ENCABEZADOS Y TEXTO */
+/* Especificidad 0-0-0-1*/
+h2, h3, h4, h5, h6 {
+    margin-top: 1rem;
     margin-bottom: 0.3rem;
 }
 
-/* El párrafo que viene justo después del h3 (especificidad 0-0-0-5)*/
-main > section > article > h3 + p {
-    margin-bottom: 0.3rem;
+/* Especificidad 0-0-0-1 */
+p {
+  margin-top: 0.2rem;
 }
 
-/* Selector descendente hijo directo con adyacente (especificidad 0-0-0-5) */
-/* Advertencia: color de fondo heredado de body (#FFFFFF) - contraste verificado AAA */
-main > section > article > p + p {
-    font-size: 0.9em;
-    color: #666;
+/* Especificidad 0-0-0-5 */
+main > section > article > p + p { /*Dentro de article -> poner fuente de otro color para destacar*/
+    margin-bottom: 0.1rem;
+    /* Advertencia: color de fondo heredado de body (#FFFFFF) - contraste verificado AAA */
+}
+
+/* Especificidad 0-0-0-2 */
+article label {
+    display: block;
+}
+
+/* Especificidad 0-0-0-2 */
+form label {
+    display: block;
     margin-bottom: 0.5rem;
 }
 
-/* El enlace que viene después de todo (especificidad 0-0-0-4) */
-main > section > article > a {
-    display: inline-block;
-    margin-top: 0.2rem;
-}
-
-/* Selector de tipo - para mapas dinámicos (especificidad 0-0-0-1) */
-/* Se permite el uso del selector div para mapas dinámicos */
-section > div {
+/* MULTIMEDIA */
+/* Especificidad 0-0-0-2 */
+article img {
     width: 100%;
-    margin-top: 1rem;
+    max-width: 35.5rem;
+    height: 19.5rem;
 }
 
-/* Selector descendente (especificidad 0-0-0-2) */
+/* Especificidad 0-0-0-2 */
+article video {
+    width: 100%;
+    max-width: 35.5rem;
+    height: 19.5rem;
+}
+
+/* Especificidad 0-0-0-2 */
 section svg {
     width: 100%;
     height: auto;
 }
 
-/* Selector descendente (especificidad 0-0-0-2) */
-article img {
+/* Especificidad 0-0-0-2 */
+section > div { /* Uso del selector div para mapas dinámicos */
     width: 100%;
-    max-width: 37.5rem;
-    height: auto;
+    height: 400px;
+    margin-top: 1rem;
 }
 
-/* Selector descendente (especificidad 0-0-0-2) */
-article video {
-    width: 100%;
-    max-width: 37.5rem;
-    height: auto;
+/*  TABLAS  */
+/* Especificidad 0-0-0-1 */
+caption{
+    padding: 0.25rem;
 }
-
 
 /* Reglas para dispositivos móviles (320px a 799px)*/
 @media (min-width: 320px) and (max-width: 799px) {
 
-    /* Selector de tipo (especificidad 0-0-0-1)*/
+    /* Especificidad 0-0-0-1 */
     header {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        justify-content: center; 
+        flex-direction: column; /* Redefinición flex-direction: row → column */
+        justify-content: center; /* Redefinición align-items: center → flex-end */
     }
 
-    /*Selector de tipo (especificidad 0-0-0-1)*/
+    /* Especificidad 0-0-0-1 */
     nav {
-        display: flex;
         flex-direction: column; 
         align-items: center;
-        gap: 0.6rem;
+        gap: 0.6rem; /* Redefinición gap: 0.3rem → 0.6rem (mejor disposición de nav en móviles) */
     }
 
-    /* Selector de clase o tipo específico (especificidad 0-0-0-1)*/
+    /* Especificidad 0-0-0-2 */
     header + p  {
-        display: none; 
+        display: none;   /* Redefinición display: block → none (sin migas en móvil) */
     }
 
-    /* Selector de tipo (especificidad 0-0-0-1) */
+    /* Especificidad 0-0-0-1 */
     video {
         width: 100%;
         height: auto;
-    }
-
-    /* Selector de tipo (especificidad 0-0-0-1) */
-    audio {
-        width: 100%;
     }
 }

@@ -30,81 +30,121 @@ class Rutas {
             const agencia = ruta.querySelector("agencia").textContent;
             const adecuada = ruta.querySelector("adecuadaPara").textContent.trim();
             const recomendacion = ruta.querySelector("recomendacion").textContent;
-            
+            const inicio = ruta.querySelector("inicio");
+
             const seccion = document.createElement("section");
             const h3 = document.createElement("h3");
             h3.textContent = nombre;
             seccion.appendChild(h3);
 
-            const pTipo = document.createElement("p");
-            pTipo.textContent = "Tipo: " + tipo + " | Transporte: " + transporte;
-            seccion.appendChild(pTipo);
-
-            const pDuracion = document.createElement("p");
-            pDuracion.textContent = "Duración: " + duracion + " | Agencia: " + agencia;
-            seccion.appendChild(pDuracion);
-
             const pDesc = document.createElement("p");
             pDesc.textContent = descripcion;
             seccion.appendChild(pDesc);
 
-            const pAdecuada = document.createElement("p");
-            pAdecuada.textContent = "Adecuada para: " + adecuada;
-            seccion.appendChild(pAdecuada);
+            const ul = document.createElement("ul");
+            const datos = [
+                "Tipo: " + tipo,
+                "Transporte: " + transporte,
+                "Duración: " + duracion,
+                "Agencia: " + agencia,
+                "Adecuada para: " + adecuada,
+                "Recomendación: " + recomendacion + "/10"
+            ];
 
-            const pRec = document.createElement("p");
-            pRec.textContent = "Recomendación: " + recomendacion + "/10";
-            seccion.appendChild(pRec);
+            datos.forEach((texto) => {
+                const li = document.createElement("li");
+                li.textContent = texto;
+                ul.appendChild(li);
+            });
+
+            seccion.appendChild(ul);
+
+            //Punto origen
+            const lugar = inicio.querySelector("lugar").textContent;
+            const direccion = inicio.querySelector("direccion").textContent;
+
+            const h4Inicio = document.createElement("h4");
+            h4Inicio.textContent = "Punto de origen: " + lugar;
+            seccion.appendChild(h4Inicio);
+
+            const pDir = document.createElement("p");
+            pDir.textContent = "Dirección: " + direccion;
+            seccion.appendChild(pDir);
 
             // Hitos
             const hitos = ruta.querySelectorAll("hito");
+            let distanciaAcumulada = 0;
+            let contadorHito = 1;
 
             hitos.forEach((hito) => {
-                const nombreHito = hito.querySelector("nombre").textContent;
-                const descHito = hito.querySelector("descripcion").textContent.trim();
-                const distancia = hito.querySelector("distancia").textContent;
-                const unidad = hito.querySelector("distancia").getAttribute("unidad");
+                //Calcular distancia entre hitos importantes
+                const distancia = parseFloat(hito.querySelector("distancia").textContent);
+                distanciaAcumulada += distancia;
 
-                const artHito = document.createElement("article");
+                const elementoNombre = hito.querySelector("nombre");
+                if(elementoNombre){
+                    const nombreHito = elementoNombre.textContent;
+                    const descHito = hito.querySelector("descripcion").textContent.trim();
+                    const distUnidad = hito.querySelector("distancia").getAttribute("unidad");
+                    
+                    //Creamos un article por cada hito
+                    const artHito  = document.createElement("article");
 
-                const h4 = document.createElement("h4");
-                h4.textContent = nombreHito;
-                artHito.appendChild(h4);
+                    const h4 = document.createElement("h4");
+                    h4.textContent = "Hito " + contadorHito + ": " + nombreHito;
+                    artHito.appendChild(h4);
 
-                const pDescHito = document.createElement("p");
-                pDescHito.textContent = descHito;
-                artHito.appendChild(pDescHito);
+                    const pDescHito = document.createElement("p");
+                    pDescHito.textContent = descHito;
+                    artHito.appendChild(pDescHito);
 
-                const pDist = document.createElement("p");
-                pDist.textContent = "Distancia desde el anterior: " + distancia + " " + unidad;
-                artHito.appendChild(pDist);
+                    const lon = hito.querySelector("coordenadas longitud").textContent;
+                    const lonUnidad = hito.querySelector("coordenadas longitud").getAttribute("unidad");
+                    const lat = hito.querySelector("coordenadas latitud").textContent;
+                    const latUnidad = hito.querySelector("coordenadas latitud").getAttribute("unidad");
+                    const alt = hito.querySelector("coordenadas altitud").textContent;
+                    const altUnidad = hito.querySelector("coordenadas altitud").getAttribute("unidad");
 
-                // Fotos del hito
-                const fotos = hito.querySelectorAll("foto");
-                fotos.forEach((foto) => {
-                    const url = foto.getAttribute("url");
-                    const desc = foto.getAttribute("descripcion") || "";
+                    const pCoords = document.createElement("p");
+                    pCoords.textContent = "Latitud: " + lat + " " + latUnidad + " | Longitud: " + lon + " " + lonUnidad + " | Altitud: " + alt + " " + altUnidad;
+                    artHito.appendChild(pCoords);
 
-                    const img = document.createElement("img");
-                    img.src = url;
-                    img.alt = desc;
-                    artHito.appendChild(img);
-                });
+                    const pDist = document.createElement("p");
+                    pDist.textContent = "Distancia desde el hito anterior: " + distanciaAcumulada + " " + distUnidad;
+                    artHito.appendChild(pDist);
 
-                const videos = hito.querySelectorAll("video");
-                videos.forEach((video) => {
-                    const url = video.getAttribute("url");
-                    const desc = video.getAttribute("descripcion") || "";
+                    // Multimedia del hito
+                    const h5 = document.createElement("h5");
+                    h5.textContent = "Multimedia del hito " +  contadorHito;
+                    artHito.appendChild(h5);
+                    
+                    const fotos = hito.querySelectorAll("foto");
+                    fotos.forEach((foto) => {
+                        const url = foto.getAttribute("url");
+                        const desc = foto.getAttribute("descripcion") || "";
 
-                    const elementVideo = document.createElement("video");
-                    elementVideo.src = url;
-                    elementVideo.controls = true;
-                    elementVideo.alt = desc;
-                    artHito.appendChild(elementVideo);
-                });
+                        const img = document.createElement("img");
+                        img.src = url;
+                        img.alt = desc;
+                        artHito.appendChild(img);
+                    });
 
+                    const videos = hito.querySelectorAll("video");
+                    videos.forEach((video) => {
+                        const url = video.getAttribute("url");
+                        const desc = video.getAttribute("descripcion") || "";
 
-                seccion.appendChild(artHito);
+                        const elementVideo = document.createElement("video");
+                        elementVideo.src = url;
+                        elementVideo.controls = true;
+                        elementVideo.textContent = desc;
+                        artHito.appendChild(elementVideo);
+                    });
+
+                    seccion.appendChild(artHito);
+                    distanciaAcumulada = 0;
+                    contadorHito++;
+                }
             });
 
             // Altimetría SVG
@@ -155,24 +195,8 @@ class CargadorSVG {
 class CargadorKML {
 
     constructor(archivoKML, contenedor) {
-        this.inicializarMapa(contenedor);
+        this.contenedor = contenedor;
         this.cargarKML(archivoKML);
-    }
-
-    inicializarMapa(contenedor) {
-        const h4 = document.createElement("h4");
-        h4.textContent = "Planimetría de la ruta";
-        contenedor.appendChild(h4);
-
-        this.divMapa = document.createElement("div");
-        this.divMapa.style.width = "100%";
-        this.divMapa.style.height = "400px";
-        contenedor.appendChild(this.divMapa);
-
-        this.mapa = new google.maps.Map(this.divMapa, {
-            center: { lat: 0, lng: 0 },
-            zoom: 2
-        });
     }
 
     cargarKML(archivoKML) {
@@ -187,39 +211,37 @@ class CargadorKML {
 
 
     procesarKML(textoKML) {
-    const parser = new DOMParser();
-    const xml = parser.parseFromString(textoKML, "text/xml");
-    const ns = "http://www.opengis.net/kml/2.2";
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(textoKML, "text/xml");
+        const ns = "http://www.opengis.net/kml/2.2";
 
-    // Coordenadas de la LineString (para la polilínea)
-    this.coordenadas = [];
-    const lineStrings = xml.getElementsByTagNameNS(ns, "LineString");
-    for (let ls of lineStrings) {
-        const texto = ls.getElementsByTagNameNS(ns, "coordinates")[0].textContent.trim();
-        const puntos = texto.split(/\s+/);
-        for (let p of puntos) {
-            const [lon, lat] = p.split(",").map(Number);
-            this.coordenadas.push({ lat: lat, lon: lon });
-            console.log("Linea:", lat, lon);
+        // Coordenadas de la LineString (para la polilínea)
+        this.coordenadas = [];
+        const lineStrings = xml.getElementsByTagNameNS(ns, "LineString");
+        for (let ls of lineStrings) {
+            const texto = ls.getElementsByTagNameNS(ns, "coordinates")[0].textContent.trim();
+            const puntos = texto.split(/\s+/);
+            for (let p of puntos) {
+                const [lon, lat] = p.split(",").map(Number);
+                this.coordenadas.push([lon, lat]);
+            }
         }
-    }
 
-    // Placemarks con Point (para los marcadores)
-    this.marcadores = [];
-    const placemarks = xml.getElementsByTagNameNS(ns, "Placemark");
-    for (let pm of placemarks) {
-        const point = pm.getElementsByTagNameNS(ns, "Point")[0];
-        if (point) {
-            const nombre = pm.getElementsByTagNameNS(ns, "name")[0]?.textContent || "";
-            const coords = point.getElementsByTagNameNS(ns, "coordinates")[0].textContent.trim();
-            const [lon, lat] = coords.split(",").map(Number);
-            this.marcadores.push({ lat: lat, lon: lon, nombre: nombre });
-            console.log("Marcador:", nombre, lat, lon);
+        // Placemarks con Point (para los marcadores)
+        this.marcadores = [];
+        const placemarks = xml.getElementsByTagNameNS(ns, "Placemark");
+        for (let pm of placemarks) {
+            const point = pm.getElementsByTagNameNS(ns, "Point")[0];
+            if (point) {
+                const nombre = pm.getElementsByTagNameNS(ns, "name")[0]?.textContent || "";
+                const coords = point.getElementsByTagNameNS(ns, "coordinates")[0].textContent.trim();
+                const [lon, lat] = coords.split(",").map(Number);
+                this.marcadores.push({ lon: lon, lat: lat, nombre: nombre });
+            }
         }
-    }
 
-    this.insertarKML();
-}
+        this.insertarKML();
+    }
 
     insertarKML() {
         if (!this.coordenadas || this.coordenadas.length === 0) {
@@ -227,35 +249,58 @@ class CargadorKML {
             return;
         }
 
-        const bounds = new google.maps.LatLngBounds();
+        const h4 = document.createElement("h4");
+        h4.textContent = "Planimetría de la ruta";
+        this.contenedor.appendChild(h4);
 
-        // Marcadores
-        for (let m of this.marcadores) {
-            new google.maps.Marker({
-                position: { lat: m.lat, lng: m.lon },
-                map: this.mapa,
-                title: m.nombre
-            });
-            bounds.extend({ lat: m.lat, lng: m.lon });
-        }
+        //crear div para el mapa
+        let divMapa = document.createElement("div");
+        this.contenedor.appendChild(divMapa);
 
-        // Polilínea con las coordenadas de la LineString
-        const ruta = this.coordenadas.map(p => ({ lat: p.lat, lng: p.lon }));
-
-        const polilinea = new google.maps.Polyline({
-            path: ruta,
-            geodesic: true,
-            strokeColor: "#FF0000",
-            strokeOpacity: 1.0,
-            strokeWeight: 3
+        // 2. Inicializar Mapbox
+        mapboxgl.accessToken = "pk.eyJ1IjoiYW5uY3J4IiwiYSI6ImNtcHd3ZHo5NTAwNWoyc3BlZXI3a3JtdjEifQ.azFHN1htuUXF-vK3vmZF6w";
+        const mapa = new mapboxgl.Map({
+            container: divMapa,
+            center: [this.coordenadas[0][0], this.coordenadas[0][1]],
+            zoom: 15
         });
 
-        polilinea.setMap(this.mapa);
+        mapa.on('load', () => {
+            // Polilínea
+            mapa.addSource('ruta', {
+                type: 'geojson',
+                data: {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'LineString',
+                        coordinates: this.coordenadas
+                    }
+                }
+            });
 
-        for (let punto of ruta) {
-            bounds.extend(punto);
-        }
+            mapa.addLayer({
+                id: 'ruta-linea',
+                type: 'line',
+                source: 'ruta',
+                paint: {
+                    'line-color': '#FF0000',
+                    'line-width': 5
+                }
+            });
 
-        this.mapa.fitBounds(bounds);
+            // Marcadores
+            for (let m of this.marcadores) {
+                new mapboxgl.Marker()
+                    .setLngLat([m.lon, m.lat])
+                    .setPopup(new mapboxgl.Popup().setText(m.nombre))
+                    .addTo(mapa);
+            }
+
+            const bounds = new mapboxgl.LngLatBounds();
+            for (let coord of this.coordenadas) {
+                bounds.extend(coord);
+            }
+            mapa.fitBounds(bounds, { padding: 50 });
+        });
     }
 }

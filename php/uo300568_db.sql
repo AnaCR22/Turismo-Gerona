@@ -1,10 +1,9 @@
+CREATE USER IF NOT EXISTS 'DBUSER2026'@'localhost' IDENTIFIED BY 'DBPWD2026';
+GRANT ALL PRIVILEGES ON UO300568_DB.* TO 'DBUSER2026'@'localhost';
+FLUSH PRIVILEGES;
+
 CREATE DATABASE IF NOT EXISTS UO300568_DB;
 USE UO300568_DB;
-
-CREATE TABLE tipos_recurso (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(50) NOT NULL
-);
 
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -12,6 +11,11 @@ CREATE TABLE usuarios (
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     telefono VARCHAR(20)
+);
+
+CREATE TABLE tipos_recurso (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE recursos (
@@ -26,6 +30,18 @@ CREATE TABLE recursos (
     FOREIGN KEY (id_tipo) REFERENCES tipos_recurso(id)
 );
 
+CREATE TABLE presupuestos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NOT NULL,
+    id_recurso INT NOT NULL,
+    num_plazas INT NOT NULL,
+    precio_unitario DECIMAL(8,2) NOT NULL,
+    precio_total DECIMAL(8,2) NOT NULL,
+    fecha DATETIME NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
+    FOREIGN KEY (id_recurso) REFERENCES recursos(id)
+);
+
 CREATE TABLE reservas (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NOT NULL,
@@ -34,17 +50,6 @@ CREATE TABLE reservas (
     num_plazas INT NOT NULL,
     precio_total DECIMAL(8,2) NOT NULL,
     estado ENUM('confirmada','anulada') DEFAULT 'confirmada',
-    FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
-    FOREIGN KEY (id_recurso) REFERENCES recursos(id)
-);
-
-CREATE TABLE valoraciones (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_usuario INT NOT NULL,
-    id_recurso INT NOT NULL,
-    puntuacion INT NOT NULL CHECK (puntuacion >= 0 AND puntuacion <= 10),
-    comentario TEXT,
-    fecha DATETIME NOT NULL,
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
     FOREIGN KEY (id_recurso) REFERENCES recursos(id)
 );
@@ -60,7 +65,7 @@ INSERT INTO tipos_recurso (nombre) VALUES
 -- Recursos turísticos
 INSERT INTO recursos (nombre, descripcion, precio, plazas, fecha_inicio, fecha_fin, id_tipo) VALUES
 ('Museo de Arte de Girona', 'Visita guiada al museo de arte de la ciudad, con colecciones desde el románico hasta el arte contemporáneo.', 12.00, 30, '2026-07-01 10:00:00', '2026-07-01 13:00:00', 1),
-('Camí de Ronda: Calella - Tamariu', 'Ruta de senderismo litoral por la Costa Brava con guía local.', 25.00, 15, '2026-07-05 08:30:00', '2026-07-05 14:00:00', 2),
+('Ruta Juego de Tronos en Girona', 'Visita guiada por las localizaciones de rodaje de Juego de Tronos en el casco histórico.', 18.00, 20, '2026-07-05 09:00:00', '2026-07-05 12:00:00', 2),
 ('Restaurante Can Roca', 'Menú degustación en restaurante tradicional gerundense.', 45.00, 20, '2026-07-10 13:00:00', '2026-07-10 16:00:00', 3),
 ('Hotel Llegendes de Girona', 'Noche en hotel boutique en el casco histórico con desayuno incluido.', 95.00, 10, '2026-07-15 14:00:00', '2026-07-16 12:00:00', 4),
 ('Festival Temps de Flors', 'Entrada al festival de flores de Girona con acceso a todos los espacios.', 8.00, 100, '2026-05-10 09:00:00', '2026-05-18 21:00:00', 5);
