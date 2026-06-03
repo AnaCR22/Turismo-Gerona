@@ -76,10 +76,11 @@ class Juego {
         this.preguntas.forEach((pregunta, indice) => {
             const article = document.createElement("article");
 
-            // Mostrar índice + pregunta
-            const h3 = document.createElement("h3");
-            h3.textContent = (indice + 1) + ". " + pregunta.texto;
-            article.appendChild(h3);
+            // creación de un fieldset que envuelva las preguntas para advertencia de wave
+            const fieldset = document.createElement("fieldset");
+            const legend = document.createElement("legend");
+            legend.textContent = (indice + 1) + ". " + pregunta.texto;
+            fieldset.appendChild(legend);
 
             // Mostar opciones
             pregunta.opciones.forEach((opcion, opIndice) => {
@@ -98,9 +99,9 @@ class Juego {
 
                 label.appendChild(radio);
                 label.appendChild(document.createTextNode(" " + opcion));
-                article.appendChild(label);
+                fieldset.appendChild(label);
             });
-
+            article.appendChild(fieldset);
             seccion.appendChild(article);
         });
 
