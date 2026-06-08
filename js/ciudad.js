@@ -16,11 +16,6 @@ class Ciudad {
         return "Nombre de la capital: " + this.nombre;
     }
 
-    escribirCoordenadas() {
-        const $p = $("<p></p>").text("Coordenadas: " + this.lat + ", " + this.lon);
-        this.$main.append($p);
-    }
-
     getMeteorologiaCiudad() {
         $.ajax({
             url: "https://api.open-meteo.com/v1/forecast",

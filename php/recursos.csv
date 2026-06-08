@@ -1,0 +1,6 @@
+"id","nombre","descripcion","precio","plazas","fecha_inicio","fecha_fin","id_tipo"
+"1","Museo de Arte de Girona","Visita guiada al museo de arte de la ciudad, con colecciones desde el románico hasta el arte contemporáneo.","12.00","30","2026-07-01 10:00:00","2026-07-01 13:00:00","1"
+"2","Ruta Juego de Tronos en Girona","Visita guiada por las localizaciones de rodaje de Juego de Tronos en el casco histórico.","18.00","20","2026-07-05 09:00:00","2026-07-05 12:00:00","2"
+"3","Restaurante Can Roca","Menú degustación en restaurante tradicional gerundense.","45.00","20","2026-07-10 13:00:00","2026-07-10 16:00:00","3"
+"4","Hotel Llegendes de Girona","Noche en hotel boutique en el casco histórico con desayuno incluido.","95.00","10","2026-07-15 14:00:00","2026-07-16 12:00:00","4"
+"5","Festival Temps de Flors","Entrada al festival de flores de Girona con acceso a todos los espacios.","8.00","100","2026-05-10 09:00:00","2026-05-18 21:00:00","5"

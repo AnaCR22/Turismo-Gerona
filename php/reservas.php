@@ -57,11 +57,12 @@ if ($accion === 'login' && $_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <nav>
             <a href="reservas.php?accion=recursos">Recursos</a>
-            <a href="reservas.php?accion=registro">Registro</a>
-            <a href="reservas.php?accion=login">Iniciar sesión</a>
-            <?php if (isset($_SESSION['usuario_id'])): ?>
+            <?php if (isset($_SESSION['usuario_id'])): ?> 
                 <a href="reservas.php?accion=mis_reservas">Mis reservas</a>
                 <a href="reservas.php?accion=logout">Cerrar sesión</a>
+            <?php else: ?>
+                <a href="reservas.php?accion=registro">Registro</a>
+                <a href="reservas.php?accion=login">Iniciar sesión</a>
             <?php endif; ?>
         </nav>
 

@@ -11,14 +11,14 @@ header {
     flex-wrap: wrap; 
 }
 
-/* Especificidad 0-0-0-2*/
+/* Especificidad 0-0-0-1*/
 nav {
     display: flex;
     gap: 0.3rem; 
     flex-wrap: wrap; 
 }
 
-/* Especificidad 0-0-0-1*/
+/* Especificidad 0-0-0-2*/
 nav a {
     padding: 0px 5px;
 }
@@ -38,7 +38,6 @@ p {
 /* Especificidad 0-0-0-5 */
 main > section > article > p + p { /*Dentro de article -> poner fuente de otro color para destacar*/
     margin-bottom: 0.1rem;
-    /* Advertencia: color de fondo heredado de body (#FFFFFF) - contraste verificado AAA */
 }
 
 /* Especificidad 0-0-0-2 */
@@ -92,7 +91,7 @@ caption{
     /* Especificidad 0-0-0-1 */
     header {
         flex-direction: column; /* Redefinición flex-direction: row → column */
-        justify-content: center; /* Redefinición align-items: center → flex-end */
+        justify-content: center; /* Redefinición justify-content: space-between → center */
     }
 
     /* Especificidad 0-0-0-1 */
